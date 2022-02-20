@@ -1,0 +1,1302 @@
+<style>
+    
+    /*doctors_specialists_second*/
+
+    .doctors_specialists_second {
+        width: 100%;
+        margin-bottom: 120px;
+        margin-top: 60px;
+    }
+
+
+    .doctors_specialists_second_wrapper {
+        width: 100%;
+        max-width: 1338px;
+        margin: 0 auto;
+    }
+    .doctors_specialists_second_main_title {
+        color: #000000;
+        font-family: "Geometria",sans-serif;
+        font-size: 60px;
+        font-weight: 300;
+        font-style: normal;
+        line-height: normal;
+        margin-bottom: 70px;
+        padding-left: 20px;
+        border-left: 6px solid #999966;
+    }
+
+    .doctors_specialists_second_item_title {
+        color: #000000;
+        font-family: "Geometria",sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        font-style: normal;
+        padding-left: 10px;
+        border-left: 3px solid #999966;
+        margin-bottom: 48px;
+    }
+
+    .doctors_specialists_second_item_doctor_img_info_wrapper {
+        width: 31%;
+        border-radius: 20px;
+        border: 5px solid #d6d6c2;
+        background-color: #ffffff;
+        padding: 20px;
+        margin-bottom: 60px;
+        margin-left: 12px;
+        margin-right: 12px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .doctors_specialists_second_item_doctor_img_info_parent_wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    }
+
+    .doctors_specialists_img {
+        max-width: 368px;
+        height: 352px;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .doctors_specialists_img img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./images/main_logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="http://fonts.cdnfonts.com/css/geometria" rel="stylesheet">
+    <title>Главная</title>
+</head>
+
+<body>
+
+    <div class="kinetic_wrapper" id="doctors_specialists_main_wrapper">
+        <header class="header">
+            <div class="header_wrapper">
+                <div class="header_logo_wrapper">
+                    <a href="/">
+                        <img src="./images/main.svg">
+                    </a>
+                    <a href="/" class="hidden-logo">
+                        <img src="./images/kinetik-logo_03.png" alt="kinetik-logo">
+                    </a>
+                </div>
+                <div class="header_details_part_wrapper">
+                    <div class="header_details_first_part">
+                        <div class="header_address_phone_info_wrapper">
+                            <div class="header_address_info_wrapper">
+                                <div class="header_address_img">
+                                    <img src="./images/place.png">
+                                </div>
+                                <p class="header_address_info">
+                                    город Новосибирск,
+                                    ул. Щетинкина, 66
+                                </p>
+                            </div>
+                            <div class="header_phone_info_wrapper">
+                                <div class="header_address_img">
+                                    <img src="./images/information.png">
+                                </div>
+                                <p class="header_address_info">
+                                    Единая справочная: +7 (383) 247-87-00
+                                </p>
+                            </div>
+                        </div>
+                        <div class="header_online_booking_call_btns_wrapper">
+                            <!-- <button class="header_online_booking_btn"> -->
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="34" viewBox="0 0 30 34"><g><g><image width="30" height="34" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAiCAYAAABIiGl0AAAAAXNSR0IArs4c6QAAAw1JREFUWEe111vIplMUB/DfpGgkopwTkpALpZDcUQ7jlGONXJBSrigXDjnLqUyjSNRkmKI0k3HDYCKnZCaHaHLOSC4wxqHIYRym/9fe2R7f877v93zvt27ed++91v6vtZ512ov8S0fgSpyIfZr9oX+/w8t4AO90L1lUNk7FuqEIE8hdjMdbvgAfiC+azU34FP9McGEfS7336I5HP6rrMDyMy8vG3bhuHoBd0WuQO0PP4vQW+HMcjI9x+BRB61UbcQx+xe74PQexeCv2wFqcuwDAj+BS/In9sKUCf4O98AzOWADgBNVFxdIDWuCvsXf3G2BH7DRAkT+qO4vsE1iK3xDgpNmMq2cDvgD3Y+cBwAG4CQ8NAX4K5wwArSLvoqbSnCxObl+P3QaA/4xl+HCIxQPwekXmZPE0gVfj/JJO++PbUcF1KG7ALgM0SKGIq/OdQ0nTJeV/CsiPo4CfxtkDQKvI+ziqLI7HPaVTJdpnqC+dzsKD2HUA+C+4Fo+Nku0DjswO88jjbeMUHgU8TnZe533A2U/1Ghdc6WyZMkZR7rkMh+ArrMLKPuD7yhg0iVWn4bkexltL+ewe39sHfBtunAQVJ+GlWXhvxi1lP5ZmykmEJ3Z6ozpnYRrXJL4sY1IXt6t4enLcfSw2pJgsRHDdXopPq8zfSIq+WdriX9MGbkEDthxXNxqkgcwE7DSBu4F0MtbjhDJW7dkosHZawHeUNlrvPgUvNECJhUwfoczvS6YBnHH4zgakWpqtDHdvYd8WtLp6PsNeavlP5dJMkelCcW8oc9x75TfreCCemKFY/H2ZdzPunDdh7la28K8pi7g7rbSC5r0Ui/8HWoE34yB8gCPnCLyi5GcGvMVFNr38lca9/3lBtBavxCVlI9+rPjnG6ZAKlGkij4HPcFdx9ZllNI5876weV0fDTxqUN8q6fbTl/2t4tOFLED1f1jmvL8/KkvqdOj4rVeYL8eQ4E3FYo2QGhSs6MlEgbo5CIz3Xankcrio1Ou7r0tvlbfVDOcibOp8p1ehFvIrXkZwdS9sB6MPIUbHo2t8AAAAASUVORK5CYII="/></g></g></svg> -->
+                            <!-- Записаться -->
+                            <!-- </button> -->
+                            <button class="header_call_link">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="39" height="39" viewBox="0 0 39 39">
+                                    <g>
+                                        <g>
+                                            <image width="39" height="39"
+                                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAnCAYAAACMo1E1AAAAAXNSR0IArs4c6QAABV9JREFUWEe1mAfMXlMYx3+NPSLUqq1qr8RK7R2xxQg1WhJ7ldpBjCC22rU3qVmjokKKIEZo7V3ECmrvWfJ785zmfDf3vve9dT3Jl3zvPet/nvOc//N/Tj+a27LALsCGwFrATDVTTACeAu4BnmiyXL8GndcBRgA7loz5HvgS+DnAzgvMU9JPkKOA23pZtxdwcwEXA3tkE04GxgAPA28AnwA/Ze0zA/MDSwEbA9sDejzZ08BwQK9WWh24LYHrgflihleBC4C7CmB6ccRm4fnNs85Hxnyl47uBOxC4PEb9AxwDnNcLipo+2wCXAotGv2uBfcrGVIE7Cjg389aQOL4WsHWmmCVOxIul3QnsXJy8DNyuWcB6uzYB/m4LVWGeC4HD4ttlwCF5exHc0sDb0eFFYPX/CVQ+7SUZqGHAzamxCE5gAvwWWAz4sQKcNCG/fdoS+EfjhJxuAPCF/+TgDgJ0rbY+8GTFwrsBVwDSxYnAOS0AdK5vIhYfBLbOwU0f1KA3SoMzAMh1U90e35YAPmgB4H7AlTHPqsDE5Ll9gasAKWOB5NbCgnrs1vj2TGQASfaxINoW8DEJcLMS/A4J3DvB5rcD0kbRTF2mHs24lO03BR6Jb+bYZ1tAl3Nrf8G5e8Fppho9UTRBCGZixGNKVe8Bg4DngDVbADcr8HXE81DBHRDJ+DvAPFpmzwNrAMbF1VmHlYBX4vcqwEstALwfMIuMFtwtwO6RxPO8l69zL7Bd9B2aNZwFHJsHcQvgTgBOBz4S3AvAakEJaaHiGscDZwC/AHNExtgrUpDZw7aTWwDmFHpN7/0luM/ihhqM8leZLQx8HA3Sibf20JBSf0aMTGkJ3MrAyzpAcApEA9Fb6m2tsgeCHN3MQpEhfgBmBMYBW7QEzsz0oXMJ7tfYuQrhji4LLAO8Fe0eo9lBEan81uTJ/VsAuIjxlsCpas2VewPX1UyuxPZ2a+sCKlpVskes5dpMMlXtmp8FnsKiDv9yIc+m6LnXgBWAU4BT60ZGqloc+ANYMha9AdgzxnrE1ggK1dnj2+8x99lAXWwq0RQCnZhLNHE3sFMP4AZCJ8041qJm+SBOBcDRhfESqmHjhdLMLvYxfqvscGAkMNkFjgPOjCLF8+7FNgLGR0cBrh2AVRNynydhuEjcyh9FZR6PVnF+K7ObALl0nOCcwAygrQi83gs6YCtgbHZsymz5SVNyvRkA03SGghvS8x7tdBXruBkLqhGC8+8roH+484gewdnNhK/+SmnPwFcXlsl687ZU5eUzlLzpRdsWuC8+Dkyq5LSgBvOrg5vUDAtGWvOoNTeaCudEPSl/226tqsr5rQSct98Q8SQHJ3ACMkY0gZ7UwHupqx53rISezBCRqPVwAjbY1FQy/wbA4/HdFDY2l+kXBS8pOK0preKbmkJVkApTPZqbelCakILK7P2IRzdk7PepIWYAfPOwplS3KZWn1awJVDhqPLnOXJlLreK8UocUolnxWfn1AedvZZHBqlVW4tOKuGJcUjc2+9ThE0XHyopqK30rfu387P+WMXWmy+sSL4MpcapVPUeMjjc4O94IuLu2zdh089q7gFKpzw3u9pDj61ICZf5V76Ui578A9aL4kJN4zviWA6WxPlb3BKYYyBWuqsXd+ibX1KSrgyNMkiCQlBWvZdRSGnPFRSVXXwKUMskesgAJXuporwqbOzhOQeGLaAJl9WZcpyK6dHid5/JBxoi6zRyZm+WhHPV54dnVfkoqqSmZNcg1ITTs39WagHMik7WKQdW8HjBb3QLR7guBMsk4rgWV5mwKLsdispdkZXNrijmjrjB+JHPVhfrNl4BuR1+5v38B42kdSwGq4XsAAAAASUVORK5CYII=" />
+                                        </g>
+                                    </g>
+                                </svg>
+                                <span>Позвоните мне</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="header_details_second_part">
+                        <nav class="header_main_nav_wrapper">
+                            <ul class="header_main_nav_ul_list_wrapper">
+                                <li class="header_main_nav_ul_li nested_li">
+                                    <a href="about_the_clinic.html" class="header_main_nav_link">О ЦЕНТРЕ</a>
+
+                                    <ul class="header_main_nested_nav">
+                                        <li class="header_main_nested_nav_li">
+                                            <a href="kinetiq.html"
+                                                class="header_main_nested_nav_link">Kinetiq</a>
+                                        </li>
+                                        <li class="header_main_nested_nav_li">
+                                            <a href="single2.html" class="header_main_nested_nav_link">Фото и видео</a>
+                                        </li>
+                                        <li class="header_main_nested_nav_li">
+                                            <a href="licenses_documents.html" class="header_main_nested_nav_link">Документы и
+                                                лицензии</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="header_main_nav_ul_li">
+                                    <a href="service_price.html" class="header_main_nav_link">УСЛУГИ И ЦЕНЫ</a>
+                                </li>
+                                <li class="header_main_nav_ul_li">
+                                    <a href="articles.html" class="header_main_nav_link">СТАТЬИ</a>
+                                </li>
+
+                                <li class="header_main_nav_ul_li nested_li2">
+                                    <a href="patients.html" class="header_main_nav_link">ПАЦИЕНТАМ</a>
+                                    <ul class="header_main_nested_nav2">
+                                        <li class="header_main_nested_nav_li">
+                                            <a href="documents_for_consultative_reception.html"
+                                                class="header_main_nested_nav_link">Документы для
+                                                консультативного
+                                                приема</a>
+                                        </li>
+                                        <li class="header_main_nested_nav_li">
+                                            <a href="inner_order_rules.html" class="header_main_nested_nav_link">Правила
+                                                внутреннего
+                                                распорядка</a>
+                                        </li>
+                                        <li class="header_main_nested_nav_li">
+                                            <a href="medical_information_help.html" class="header_main_nested_nav_link">
+                                                Информация о
+                                                медицинской помощи
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="header_main_nav_ul_li">
+                                    <a href="index.html#personal" class="header_main_nav_link">ВРАЧИ-СПЕЦИАЛИСТЫ</a>
+                                </li>
+                                <li class="header_main_nav_ul_li">
+                                    <a href="contacts.html" class="header_main_nav_link">КОНТАКТЫ</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile_header_wrapper" style=”position: fixed; z-index: 9999; margin-bottom: 20px;”>
+                <div class="header_logo_wrapper">
+                    <a href="index.html">
+                        <img src="./images/mobile_logo.png">
+                    </a>
+                </div>
+                <div class="mobile_header_phone_hamburger-menu_wrapper">
+                    <a href="tel:+73832478700" class="mobile_header_call_link">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55"
+                            height="55" viewBox="0 0 55 55">
+                            <g>
+                                <g>
+                                    <image width="55" height="55"
+                                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAA3CAYAAACo29JGAAAAAXNSR0IArs4c6QAACEZJREFUaEPNmgfQXkUVhp+IKCiIIEWaQDAQlF6FQQREFAtNRCAIhjqAFGdQqlIdAQEZwBKViYUyFAWkKIxUA0T6hBqq9EQYMKF35/ln95+TzXe/e7/2x3fmn/m/e/fu7rv37DnvOXtH0X8sCqwMrAWsDiwPeO3jwAeBd4EZwH+AfwP3AP8C7gOe6ed0RvWps08CW6a/LwLzdNGvpP8JXAJcBjzWRR+zPNIruVWBA4CdgHl7nUzx/HnAL4Cbuu23W3JjgB8DO1cM/BrwIPBAMrengReAt4C5gU8ASwArAZ8FVgQWqOjr0jTWlE5JdkPuUOCnLQZ6HfgLcCVwdSLTdD4S2wT4OrB1Il8+ewJwWNMObdcJOVf67DSJOMazwM/TvWmdDF7R9mPJIg4CtJCIu9M9nU8tmpLbMG1yPV7GO8CxwMmAb20Q2B84HpBwxnvAN5PjaTtmE3LfAP5a9PJ3wIEfGQSjok/DyBnA9sX1PYHftRu/jlwrYkelNzYCvGYZYt/kPePFvYDfVk2kHbn1gMnFg+OAc0eaVRhvc0CrifPWAelRZ0MVuQUB3fdHwhN6sivmILE89DpJ0cS563hm2yJV5G4F7CRjB+D8/wNieQobATeE+TwJLFPOrxW5HwInhoZzao/VreXuhUNRzXwvPlSSWwyIsWoS8Pm6UdJ9F0UXrRLRfd/S8Llemrn/dwwdKAcV4kMoyV0IbBcaS1b1Xoc/tZBinwKeqnuwx/tmGWYY2Te4nXSEs5H7NPBwGOxH6Q3Ujf9H4DstGl0LmCEMGupbFzdDS9PiZnlzSitdvXgJWKjBrP4A7BLaKZijh3UVXc1B46Eg1W4EvhDJSWR6Sia9/oMkq9pNqiR2R9pz5mKrpAfvDf8PkqBbyS2VsYJWmPeckX5CuvNGypxfbjMbpdfp4b6b2LekxlQmxbCxTRMd2AfmzwEmzeIY4OhM7h9hf1wAfLvNYGbZzwPzpTYq9Q0K8WwuZ44mWsagPpApuzgV+H66aEAfIzmVvnssQ2ISrIJqQBvP0BE9WjTeGLguXPtayvMGwGm4y3WTcskXRksuTkSTNEvWMVRhuaK+4W8LPSXuSgUir7s/vztIZqlv/YZZhBgnuUMAs1yhia1RMwnLBHai/hTjgd8Xz7gnjwulg58AR44AOUX1l9M4EyTn5s+5kvEiuvaq+Vih2irdvAbYLDT8aiGwdUzLAi+OADmV0RFpnEmSuw1YO12wPhJ1ZdV89gZ+nW6+n2Lif9Nv3+Ku6X89mH1bihgJKPCtmompknsCUCoJS3T5ZrvJLFLIMk3Qapiw9mFNRSjdlHAjBdWJQVxMk5yeMtdGtkjJYJPJ+OZ8g+JVYGFAhzR/IpULs7PovSYd99BGK9ESxQzJvQJ8NF1w77iHmsCAqdllxP1qfeM34Z4LsU+TTntsozO8M/XxiuTcK7kg+hXgqg4GOA04MLQ3rOQk0tK4VbMMzVbzHSQ8n7g9DTBTcqYlS6ULnWbcH0heMC+OVmB9Uw+pgH48xB2H+Blg3hdxMLAacH+qffaSJrmYLqqYLjlfY45tDnRKh0trpdj0JsP+XEFhCDCYx3qnschDk7cLT217r6kLjYvdIAroIeH8Z2Db1NNEYLcuejV8xDdiZiABoYJxNZcM/XqC43ZYs2Is36Jm7Nw6gc+4OGKy5FQOeS/oadRo3cDKmAE8w/wwJ7GmVJbf4h6MY9wMfKZ4w963T/d0qV2r5ueiWqUTEyVnLTA7EV26skrz6AbRxH3+IuBboSPL72b4EeekEoXx8MyizGE75/K54AXbzcvDS/e8GC8545MpTIbm5Ap0gw+nfZSTVfsw5bfPnHmYCqlgPLry7O2kYiCr3JqXxZ4PpXuasQmoB5RV8DR3uDgEjM35nGaxfnpK+aQY7hYSvD6tdu7DeKj68XpTKOL1ohnG4nbZik7o8NTYgvLSmZx2bcwSM5P7frPpLCraeVZnFh5hKHDDa/7t4NtUxpmBiIuD06t6zrCjdxZDISeTW7wQt20PGDograMqUx33hYOrWlotoCc3FlwzrMhp5u0WO/oNn/ONT4l1S71Zdt9OIAf2Dri0bOrAnsRkcZ4baarubdOnqSHGxS2hl1Qv5oyjai7RkQ3H2UhOttp5xn7AL3tllp5XRBsL/TigCqZOcT6WMgxLFl3bwRLG5aGB4ehv/i4rzp5lfyk19OTUsKCk6hf8LkWCdQ7LY2EdXLsKXJ6TaZUpmDD464WHUJJzQ7oxM1wRXXO/4Yc31vitAMSw4TjGRoO/6VMdtKyYbbggw2eKrU55Sinlieav6kbp4b4LqkNThJuxx8Vt163+IR46Wi5R+A+j6nzOup+rm7FpUarrgUtfHlWqxS8a3JdWvfzOpZacB3lluW6k6v517BXiZhrxoxwdT87Aa8nZoPRCejPdutXpOQU9uionplCVXzVUmWWe/B4tvhawbhJLCCNF1INNDzvinNtm93XknHhZD/Ga+lN5VBeD+kF8LsBzgDJG1pYtmpBzgq6aLjrCTMJvsc7qB4OKPsys9d6ji/u6/1w3rRy+KTk70N49g9ZTRahqXFnzMj9d6gdcTMV8eR6v2jcGNsouOiHnpG0vEU2yhPHJuGM2YJ7WKVE1pOUO49ewygiDeJjiGUQT1TL0WKfk8liex5lVV515u8KequqyjUcGZ2Wcks495NmembdWYB1FMrr4VlBxmL137KW7JZcn4YmKAnsQEs2Kmsqo3OuNzb5XcnkgBbEE3Ssxe248kdTQTECz9ivBnr9j6Re5SGJsqlta1LGuoSxSTVgm0CTdi2biZvx+kOOnwhKxUhxrIJ0uzGzt/wf+sZVe5D+DyQAAAABJRU5ErkJggg==" />
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                    <div class="mobile_header_hamburger-menu_close_wrapper">
+                        <div class="hamburger-menu">
+                            <span class="hamburger-menu-line"></span>
+                            <span class="hamburger-menu-line"></span>
+                            <span class="hamburger-menu-line last-line"></span>
+                        </div>
+                        <div class="hamburger-menu_close">
+                            <svg height="329pt" viewBox="0 0 329.26933 329" width="329pt" xmlns="http://www.w3.org/2000/svg"><path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"/></svg>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mobile_version">
+                    <div class="mobile_version_wrapper">
+                        <nav class="header_main_nav_wrapper">
+                            <ul class="header_main_nav_ul_list_wrapper">
+                                <li class="header_main_nav_ul_li">
+                                    <div class="nested_li_title_svg_wrapper">
+                                        <a href="about_the_clinic.html" class="nested_li_title">О КЛИНИКЕ</a>
+                                        <div class="nested_li_img">
+                                            <img src="../images/mobile_version.png" alt="">
+                                        </div>
+                                    </div>
+                                    
+                                    <ul class="header_main_nested_nav">
+                                        <li class="header_main_nested_nav_li">
+                                            <a href="kinetiq.html"
+                                                class="header_main_nested_nav_link">Kinetiq</a>
+                                        </li>
+                                        <li class="header_main_nested_nav_li">
+                                            <a href="single2.html" class="header_main_nested_nav_link">Фото и видео</a>
+                                        </li>
+                                        <li class="header_main_nested_nav_li">
+                                            <a href="licenses_documents.html" class="header_main_nested_nav_link">Документы и
+                                                лицензии</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="header_main_nav_ul_li">
+                                    <a href="service_price.html" class="header_main_nav_link">УСЛУГИ И ЦЕНЫ</a>
+                                </li>
+                                <li class="header_main_nav_ul_li">
+                                    <a href="articles.html" class="header_main_nav_link">СТАТЬИ</a>
+                                </li>
+
+                                <li class="header_main_nav_ul_li ">
+                                    <div class="nested_li_title_svg_wrapper">
+                                        <a href="patients.html" class="nested_li_title">ПАЦИЕНТАМ</a>
+                                        <div class="nested_li_img">
+                                            <img src="../images/mobile_version.png" alt="">
+                                        </div>
+                                    </div>
+                                    
+                                    <ul class="header_main_nested_nav">
+                                        <li class="header_main_nested_nav_li">
+                                            <a href="documents_for_consultative_reception.html"
+                                                class="header_main_nested_nav_link">Документы для
+                                                консультативного
+                                                приема</a>
+                                        </li>
+                                        <li class="header_main_nested_nav_li">
+                                            <a href="inner_order_rules.html" class="header_main_nested_nav_link">Правила
+                                                внутреннего
+                                                распорядка</a>
+                                        </li>
+                                        <li class="header_main_nested_nav_li">
+                                            <a href="medical_information_help.html" class="header_main_nested_nav_link">
+                                                Информация о
+                                                медицинской помощи
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="header_main_nav_ul_li">
+                                    <a href="index.html#personal" class="header_main_nav_link">ВРАЧИ-СПЕЦИАЛИСТЫ</a>
+                                </li>
+                                <li class="header_main_nav_ul_li">
+                                    <a href="contacts.html" class="header_main_nav_link">КОНТАКТЫ</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="header_address_phone_info_wrapper">
+                                <p class="header_address_info">
+                                    город Новосибирск,
+                                    ул. Щетинкина, 66
+                                </p>
+                                <p class="header_address_info">
+                                    Единая справочная: +7 (383) 247-87-00
+
+                                </p>
+                                <p class="header_address_info">пн-вс 08.00-20.00</p>
+                        </div>
+                        <div class="header_social_links_wrapper">
+                            <a href="https://www.facebook.com/kinetiqpro-112818401004500/" class="header_social_link">
+        
+                                <img src="./images/facebook.png">
+                            </a>
+                            <a href="https://instagram.com/kinetiq.pro" class="header_social_link">
+                                <img src="./images/instagram.png">
+                            </a>
+                            <a href="https://vk.com/kinetiqpro" class="header_social_link">
+                                <img src="./images/vk.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="header_mini"></div>
+        </header>
+        <main>
+            <section class="doctors_specialists_second">
+                  <div class="doctors_specialists_second_wrapper">
+                         <h1 class="doctors_specialists_second_main_title">ВРАЧИ-СПЕЦИАЛИСТЫ</h1>
+                         <div class="doctors_specialists_second_items_wrapper">
+                                <div class="doctors_specialists_second_item">
+                                    <h2 class="doctors_specialists_second_item_title">Консультативный прием</h2>
+                                    <div class="doctors_specialists_second_item_doctor_img_info_parent_wrapper">
+                                    <div class="doctors_specialists_second_item_doctor_img_info_wrapper">
+                                        <div class="doctors_specialists_img_text_wrapper">
+                                            <div class="doctors_specialists_img">
+                                                <img src="./images/vrach_siluet.png">
+                                            </div>
+                                            <div class="doctors_specialists_info_text_wrapper">
+                                                <div class="doctors_specialists_second_name_position_wrapper">
+                                                    <p class="doctors_specialists_second_name">Капчук Иван Николаевич</p>
+                                                    <p class="doctors_specialists_second_position">Главный врач</p>
+                                                </div>
+                                                <div class="doctors_specialists_second_info_details_wrapper">
+                                                    <p class="doctors_specialists_second_item_info1">
+                                                        <span>Образование:</span>
+                                                        Новосибирская государственная медицинская академия, специальность лечебное дело, врач, 2000г.
+                                                    </p>
+                                                    <p class="doctors_specialists_second_item_info1 hidden_info">
+                                                        <span>Карьера:</span> <br>
+                                                        • Отделение восстановительного лечения АНО «Клиника НИИТО»,
+                                                        2011-2021г. <br>
+                                                        • Частная практика медицинский центр «Хорошие врачи», 2012-2021г.
+                                                    </p>
+                                                </div>
+                                                <a href="" class="doctors_specialists_info_link">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="31"
+                                                        viewBox="0 0 27 31">
+                                                        <g>
+                                                            <g>
+                                                                <image width="27" height="31"
+                                                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAfCAYAAAAWRbZDAAAAAXNSR0IArs4c6QAAAs5JREFUSEut113I3nMYB/DPE7HktTTLGcqBvIUhcyBHcuJ9NlLTkiNTCFvsZAp5aTshBwo9aJLNwWZlwlYoyluK8jLL6yZjtRab0ffp+tvf3fN/7vvvua+6u+/f739dv+//un7f6+WecFCux604E4e39vv+/A1b8SA+bRtP1GIV7ut76gj6l+DtRi9gl2NDbXyHp5G3+z+S807CbWW8H8fj96zz8F1ciO0VwqkHs5TL8FqdcTceacB24VjcjwdmCdI2/xBn4yWED1Oe/YrjcCceHyPYG7gUa7GoAdtZcV1RDBoXXhh5MV7AjV1gh+IOXNAT9S88g41lNxLYPPzYE6hRj92JfcDi2b04rydgPHsOr/YB64nRqT5SGMcF9gHOxXpc1UWQOXgK5/dETRifqE9M3yuSTeKmLrAT8FNPoEb9G5xciyR0PEr5S3WaSurp8uxaLOgJmDr4PD7qsusC64kzmvpMYEfOcMTf2DMEItexEEdVsX9zOrCjsak6QNd5B/AKlnQoXI1n0X7hyenA5uLnEQKzF0dMo3dF0T2PUuQPwTEzEWQ+zhkSxlT1rwZ0rquW0mzfgBeRdnPWOAlyJdYNgH9RjflRLB0XWIiQvhVJKj2JlbVOSuQzZxxgSdyQJfJnhf+zqkBbWpPattmCLa7m2AClxH1cwOnOYeRh2IaLZgN2GuJB5I+6m6Z6pPk+Vs/S4zKL/tKeQe5qKYzAfGuwDPuq931SRpmmHq7fqZWZ3HY01M+MmDxYjodGQSmd0D5FN6FqkjtDU5gX+SF0j0fNmfGs6TtfIqHJmw6T02u0TiW5pap6curmMswdZYaZ8qgNdg1ero3Pq5ftHkDLzP5+a++eikJqZIbazJ2NfF+M/A9QE8Z8r8btQ9w5BV+XTu7njAH9gGxG7v7f0A161qwTjqU4teja1vsW+ZOQhI2EAAlZKsRbeB3vVPJ2vvM/qNC5torYboIAAAAASUVORK5CYII=" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    Записаться
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="doctors_specialists_second_item_doctor_img_info_wrapper">
+                                        <div class="doctors_specialists_img_text_wrapper">
+                                            <div class="doctors_specialists_img">
+                                                <img src="./images/vrach_siluet.png">
+                                            </div>
+                                            <div class="doctors_specialists_info_text_wrapper">
+                                                <div class="doctors_specialists_second_name_position_wrapper">
+                                                    <p class="doctors_specialists_second_name">Капчук Иван Николаевич</p>
+                                                    <p class="doctors_specialists_second_position">Главный врач</p>
+                                                </div>
+                                                <div class="doctors_specialists_second_info_details_wrapper">
+                                                    <p class="doctors_specialists_second_item_info1">
+                                                        <span>Образование:</span>
+                                                        Новосибирская государственная медицинская академия, специальность лечебное дело, врач, 2000г.
+                                                    </p>
+                                                    <p class="doctors_specialists_second_item_info1 hidden_info">
+                                                        <span>Карьера:</span> <br>
+                                                        • Отделение восстановительного лечения АНО «Клиника НИИТО»,
+                                                        2011-2021г. <br>
+                                                        • Частная практика медицинский центр «Хорошие врачи», 2012-2021г.
+                                                    </p>
+                                                </div>
+                                                <a href="" class="doctors_specialists_info_link">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="31"
+                                                        viewBox="0 0 27 31">
+                                                        <g>
+                                                            <g>
+                                                                <image width="27" height="31"
+                                                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAfCAYAAAAWRbZDAAAAAXNSR0IArs4c6QAAAs5JREFUSEut113I3nMYB/DPE7HktTTLGcqBvIUhcyBHcuJ9NlLTkiNTCFvsZAp5aTshBwo9aJLNwWZlwlYoyluK8jLL6yZjtRab0ffp+tvf3fN/7vvvua+6u+/f739dv+//un7f6+WecFCux604E4e39vv+/A1b8SA+bRtP1GIV7ut76gj6l+DtRi9gl2NDbXyHp5G3+z+S807CbWW8H8fj96zz8F1ciO0VwqkHs5TL8FqdcTceacB24VjcjwdmCdI2/xBn4yWED1Oe/YrjcCceHyPYG7gUa7GoAdtZcV1RDBoXXhh5MV7AjV1gh+IOXNAT9S88g41lNxLYPPzYE6hRj92JfcDi2b04rydgPHsOr/YB64nRqT5SGMcF9gHOxXpc1UWQOXgK5/dETRifqE9M3yuSTeKmLrAT8FNPoEb9G5xciyR0PEr5S3WaSurp8uxaLOgJmDr4PD7qsusC64kzmvpMYEfOcMTf2DMEItexEEdVsX9zOrCjsak6QNd5B/AKlnQoXI1n0X7hyenA5uLnEQKzF0dMo3dF0T2PUuQPwTEzEWQ+zhkSxlT1rwZ0rquW0mzfgBeRdnPWOAlyJdYNgH9RjflRLB0XWIiQvhVJKj2JlbVOSuQzZxxgSdyQJfJnhf+zqkBbWpPattmCLa7m2AClxH1cwOnOYeRh2IaLZgN2GuJB5I+6m6Z6pPk+Vs/S4zKL/tKeQe5qKYzAfGuwDPuq931SRpmmHq7fqZWZ3HY01M+MmDxYjodGQSmd0D5FN6FqkjtDU5gX+SF0j0fNmfGs6TtfIqHJmw6T02u0TiW5pap6curmMswdZYaZ8qgNdg1ero3Pq5ftHkDLzP5+a++eikJqZIbazJ2NfF+M/A9QE8Z8r8btQ9w5BV+XTu7njAH9gGxG7v7f0A161qwTjqU4teja1vsW+ZOQhI2EAAlZKsRbeB3vVPJ2vvM/qNC5torYboIAAAAASUVORK5CYII=" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    Записаться
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="doctors_specialists_second_item_doctor_img_info_wrapper">
+                                        <div class="doctors_specialists_img_text_wrapper">
+                                            <div class="doctors_specialists_img">
+                                                <img src="./images/vrach_siluet.png">
+                                            </div>
+                                            <div class="doctors_specialists_info_text_wrapper">
+                                                <div class="doctors_specialists_second_name_position_wrapper">
+                                                    <p class="doctors_specialists_second_name"> Иванова Алина Дмитриевна</p>
+                                                    <p class="doctors_specialists_second_position">Врач  травматолог-ортопед</p>
+                                                </div>
+                                                <div class="doctors_specialists_second_info_details_wrapper">
+                                                    <p class="doctors_specialists_second_item_info1">
+                                                        <span>Образование:</span>
+                                                        Новосибирская государственная медицинская академия, специальность лечебное дело, врач, 2000г.
+                                                    </p>
+                                                    <p class="doctors_specialists_second_item_info1 hidden_info">
+                                                        <span>Карьера:</span> <br>
+                                                        • Отделение восстановительного лечения АНО «Клиника НИИТО»,
+                                                        2011-2021г. <br>
+                                                        • Частная практика медицинский центр «Хорошие врачи», 2012-2021г.
+                                                    </p>
+                                                </div>
+                                                <a href="" class="doctors_specialists_info_link">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="31"
+                                                        viewBox="0 0 27 31">
+                                                        <g>
+                                                            <g>
+                                                                <image width="27" height="31"
+                                                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAfCAYAAAAWRbZDAAAAAXNSR0IArs4c6QAAAs5JREFUSEut113I3nMYB/DPE7HktTTLGcqBvIUhcyBHcuJ9NlLTkiNTCFvsZAp5aTshBwo9aJLNwWZlwlYoyluK8jLL6yZjtRab0ffp+tvf3fN/7vvvua+6u+/f739dv+//un7f6+WecFCux604E4e39vv+/A1b8SA+bRtP1GIV7ut76gj6l+DtRi9gl2NDbXyHp5G3+z+S807CbWW8H8fj96zz8F1ciO0VwqkHs5TL8FqdcTceacB24VjcjwdmCdI2/xBn4yWED1Oe/YrjcCceHyPYG7gUa7GoAdtZcV1RDBoXXhh5MV7AjV1gh+IOXNAT9S88g41lNxLYPPzYE6hRj92JfcDi2b04rydgPHsOr/YB64nRqT5SGMcF9gHOxXpc1UWQOXgK5/dETRifqE9M3yuSTeKmLrAT8FNPoEb9G5xciyR0PEr5S3WaSurp8uxaLOgJmDr4PD7qsusC64kzmvpMYEfOcMTf2DMEItexEEdVsX9zOrCjsak6QNd5B/AKlnQoXI1n0X7hyenA5uLnEQKzF0dMo3dF0T2PUuQPwTEzEWQ+zhkSxlT1rwZ0rquW0mzfgBeRdnPWOAlyJdYNgH9RjflRLB0XWIiQvhVJKj2JlbVOSuQzZxxgSdyQJfJnhf+zqkBbWpPattmCLa7m2AClxH1cwOnOYeRh2IaLZgN2GuJB5I+6m6Z6pPk+Vs/S4zKL/tKeQe5qKYzAfGuwDPuq931SRpmmHq7fqZWZ3HY01M+MmDxYjodGQSmd0D5FN6FqkjtDU5gX+SF0j0fNmfGs6TtfIqHJmw6T02u0TiW5pap6curmMswdZYaZ8qgNdg1ero3Pq5ftHkDLzP5+a++eikJqZIbazJ2NfF+M/A9QE8Z8r8btQ9w5BV+XTu7njAH9gGxG7v7f0A161qwTjqU4teja1vsW+ZOQhI2EAAlZKsRbeB3vVPJ2vvM/qNC5torYboIAAAAASUVORK5CYII=" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    Записаться
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="doctors_specialists_second_item_doctor_img_info_wrapper">
+                                        <div class="doctors_specialists_img_text_wrapper">
+                                            <div class="doctors_specialists_img">
+                                                <img src="./images/vrach_siluet.png">
+                                            </div>
+                                            <div class="doctors_specialists_info_text_wrapper">
+                                                <div class="doctors_specialists_second_name_position_wrapper">
+                                                    <p class="doctors_specialists_second_name">Иванов Иван Иванович</p>
+                                                    <p class="doctors_specialists_second_position">Врач  травматолог-ортопед</p>
+                                                </div>
+                                                <div class="doctors_specialists_second_info_details_wrapper">
+                                                    <p class="doctors_specialists_second_item_info1">
+                                                        <span>Образование:</span>
+                                                        Новосибирская государственная медицинская академия, специальность лечебное дело, врач, 2000г.
+                                                    </p>
+                                                    <p class="doctors_specialists_second_item_info1 hidden_info">
+                                                        <span>Карьера:</span> <br>
+                                                        • Отделение восстановительного лечения АНО «Клиника НИИТО»,
+                                                        2011-2021г. <br>
+                                                        • Частная практика медицинский центр «Хорошие врачи», 2012-2021г.
+                                                    </p>
+                                                </div>
+                                                <a href="" class="doctors_specialists_info_link">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="31"
+                                                        viewBox="0 0 27 31">
+                                                        <g>
+                                                            <g>
+                                                                <image width="27" height="31"
+                                                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAfCAYAAAAWRbZDAAAAAXNSR0IArs4c6QAAAs5JREFUSEut113I3nMYB/DPE7HktTTLGcqBvIUhcyBHcuJ9NlLTkiNTCFvsZAp5aTshBwo9aJLNwWZlwlYoyluK8jLL6yZjtRab0ffp+tvf3fN/7vvvua+6u+/f739dv+//un7f6+WecFCux604E4e39vv+/A1b8SA+bRtP1GIV7ut76gj6l+DtRi9gl2NDbXyHp5G3+z+S807CbWW8H8fj96zz8F1ciO0VwqkHs5TL8FqdcTceacB24VjcjwdmCdI2/xBn4yWED1Oe/YrjcCceHyPYG7gUa7GoAdtZcV1RDBoXXhh5MV7AjV1gh+IOXNAT9S88g41lNxLYPPzYE6hRj92JfcDi2b04rydgPHsOr/YB64nRqT5SGMcF9gHOxXpc1UWQOXgK5/dETRifqE9M3yuSTeKmLrAT8FNPoEb9G5xciyR0PEr5S3WaSurp8uxaLOgJmDr4PD7qsusC64kzmvpMYEfOcMTf2DMEItexEEdVsX9zOrCjsak6QNd5B/AKlnQoXI1n0X7hyenA5uLnEQKzF0dMo3dF0T2PUuQPwTEzEWQ+zhkSxlT1rwZ0rquW0mzfgBeRdnPWOAlyJdYNgH9RjflRLB0XWIiQvhVJKj2JlbVOSuQzZxxgSdyQJfJnhf+zqkBbWpPattmCLa7m2AClxH1cwOnOYeRh2IaLZgN2GuJB5I+6m6Z6pPk+Vs/S4zKL/tKeQe5qKYzAfGuwDPuq931SRpmmHq7fqZWZ3HY01M+MmDxYjodGQSmd0D5FN6FqkjtDU5gX+SF0j0fNmfGs6TtfIqHJmw6T02u0TiW5pap6curmMswdZYaZ8qgNdg1ero3Pq5ftHkDLzP5+a++eikJqZIbazJ2NfF+M/A9QE8Z8r8btQ9w5BV+XTu7njAH9gGxG7v7f0A161qwTjqU4teja1vsW+ZOQhI2EAAlZKsRbeB3vVPJ2vvM/qNC5torYboIAAAAASUVORK5CYII=" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    Записаться
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="doctors_specialists_second_item_doctor_img_info_wrapper">
+                                        <div class="doctors_specialists_img_text_wrapper">
+                                            <div class="doctors_specialists_img">
+                                                <img src="./images/vrach_siluet.png">
+                                            </div>
+                                            <div class="doctors_specialists_info_text_wrapper">
+                                                <div class="doctors_specialists_second_name_position_wrapper">
+                                                    <p class="doctors_specialists_second_name">Иванов Иван Иванович</p>
+                                                    <p class="doctors_specialists_second_position">Врач  травматолог-ортопед</p>
+                                                </div>
+                                                <div class="doctors_specialists_second_info_details_wrapper">
+                                                    <p class="doctors_specialists_second_item_info1">
+                                                        <span>Образование:</span>
+                                                        Новосибирская государственная медицинская академия, специальность лечебное дело, врач, 2000г.
+                                                    </p>
+                                                    <p class="doctors_specialists_second_item_info1 hidden_info">
+                                                        <span>Карьера:</span> <br>
+                                                        • Отделение восстановительного лечения АНО «Клиника НИИТО»,
+                                                        2011-2021г. <br>
+                                                        • Частная практика медицинский центр «Хорошие врачи», 2012-2021г.
+                                                    </p>
+                                                </div>
+                                                <a href="" class="doctors_specialists_info_link">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="31"
+                                                        viewBox="0 0 27 31">
+                                                        <g>
+                                                            <g>
+                                                                <image width="27" height="31"
+                                                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAfCAYAAAAWRbZDAAAAAXNSR0IArs4c6QAAAs5JREFUSEut113I3nMYB/DPE7HktTTLGcqBvIUhcyBHcuJ9NlLTkiNTCFvsZAp5aTshBwo9aJLNwWZlwlYoyluK8jLL6yZjtRab0ffp+tvf3fN/7vvvua+6u+/f739dv+//un7f6+WecFCux604E4e39vv+/A1b8SA+bRtP1GIV7ut76gj6l+DtRi9gl2NDbXyHp5G3+z+S807CbWW8H8fj96zz8F1ciO0VwqkHs5TL8FqdcTceacB24VjcjwdmCdI2/xBn4yWED1Oe/YrjcCceHyPYG7gUa7GoAdtZcV1RDBoXXhh5MV7AjV1gh+IOXNAT9S88g41lNxLYPPzYE6hRj92JfcDi2b04rydgPHsOr/YB64nRqT5SGMcF9gHOxXpc1UWQOXgK5/dETRifqE9M3yuSTeKmLrAT8FNPoEb9G5xciyR0PEr5S3WaSurp8uxaLOgJmDr4PD7qsusC64kzmvpMYEfOcMTf2DMEItexEEdVsX9zOrCjsak6QNd5B/AKlnQoXI1n0X7hyenA5uLnEQKzF0dMo3dF0T2PUuQPwTEzEWQ+zhkSxlT1rwZ0rquW0mzfgBeRdnPWOAlyJdYNgH9RjflRLB0XWIiQvhVJKj2JlbVOSuQzZxxgSdyQJfJnhf+zqkBbWpPattmCLa7m2AClxH1cwOnOYeRh2IaLZgN2GuJB5I+6m6Z6pPk+Vs/S4zKL/tKeQe5qKYzAfGuwDPuq931SRpmmHq7fqZWZ3HY01M+MmDxYjodGQSmd0D5FN6FqkjtDU5gX+SF0j0fNmfGs6TtfIqHJmw6T02u0TiW5pap6curmMswdZYaZ8qgNdg1ero3Pq5ftHkDLzP5+a++eikJqZIbazJ2NfF+M/A9QE8Z8r8btQ9w5BV+XTu7njAH9gGxG7v7f0A161qwTjqU4teja1vsW+ZOQhI2EAAlZKsRbeB3vVPJ2vvM/qNC5torYboIAAAAASUVORK5CYII=" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    Записаться
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="doctors_specialists_second_item_doctor_img_info_wrapper">
+                                        <div class="doctors_specialists_img_text_wrapper">
+                                            <div class="doctors_specialists_img">
+                                                <img src="./images/vrach_siluet.png">
+                                            </div>
+                                            <div class="doctors_specialists_info_text_wrapper">
+                                                <div class="doctors_specialists_second_name_position_wrapper">
+                                                    <p class="doctors_specialists_second_name">Капчук Иван Николаевич</p>
+                                                    <p class="doctors_specialists_second_position">Главный врач</p>
+                                                </div>
+                                                <div class="doctors_specialists_second_info_details_wrapper">
+                                                    <p class="doctors_specialists_second_item_info1">
+                                                        <span>Образование:</span>
+                                                        Новосибирская государственная медицинская академия, специальность лечебное дело, врач, 2000г.
+                                                    </p>
+                                                    <p class="doctors_specialists_second_item_info1 hidden_info">
+                                                        <span>Карьера:</span> <br>
+                                                        • Отделение восстановительного лечения АНО «Клиника НИИТО»,
+                                                        2011-2021г. <br>
+                                                        • Частная практика медицинский центр «Хорошие врачи», 2012-2021г.
+                                                    </p>
+                                                </div>
+                                                <a href="" class="doctors_specialists_info_link">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="31"
+                                                        viewBox="0 0 27 31">
+                                                        <g>
+                                                            <g>
+                                                                <image width="27" height="31"
+                                                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAfCAYAAAAWRbZDAAAAAXNSR0IArs4c6QAAAs5JREFUSEut113I3nMYB/DPE7HktTTLGcqBvIUhcyBHcuJ9NlLTkiNTCFvsZAp5aTshBwo9aJLNwWZlwlYoyluK8jLL6yZjtRab0ffp+tvf3fN/7vvvua+6u+/f739dv+//un7f6+WecFCux604E4e39vv+/A1b8SA+bRtP1GIV7ut76gj6l+DtRi9gl2NDbXyHp5G3+z+S807CbWW8H8fj96zz8F1ciO0VwqkHs5TL8FqdcTceacB24VjcjwdmCdI2/xBn4yWED1Oe/YrjcCceHyPYG7gUa7GoAdtZcV1RDBoXXhh5MV7AjV1gh+IOXNAT9S88g41lNxLYPPzYE6hRj92JfcDi2b04rydgPHsOr/YB64nRqT5SGMcF9gHOxXpc1UWQOXgK5/dETRifqE9M3yuSTeKmLrAT8FNPoEb9G5xciyR0PEr5S3WaSurp8uxaLOgJmDr4PD7qsusC64kzmvpMYEfOcMTf2DMEItexEEdVsX9zOrCjsak6QNd5B/AKlnQoXI1n0X7hyenA5uLnEQKzF0dMo3dF0T2PUuQPwTEzEWQ+zhkSxlT1rwZ0rquW0mzfgBeRdnPWOAlyJdYNgH9RjflRLB0XWIiQvhVJKj2JlbVOSuQzZxxgSdyQJfJnhf+zqkBbWpPattmCLa7m2AClxH1cwOnOYeRh2IaLZgN2GuJB5I+6m6Z6pPk+Vs/S4zKL/tKeQe5qKYzAfGuwDPuq931SRpmmHq7fqZWZ3HY01M+MmDxYjodGQSmd0D5FN6FqkjtDU5gX+SF0j0fNmfGs6TtfIqHJmw6T02u0TiW5pap6curmMswdZYaZ8qgNdg1ero3Pq5ftHkDLzP5+a++eikJqZIbazJ2NfF+M/A9QE8Z8r8btQ9w5BV+XTu7njAH9gGxG7v7f0A161qwTjqU4teja1vsW+ZOQhI2EAAlZKsRbeB3vVPJ2vvM/qNC5torYboIAAAAASUVORK5CYII=" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    Записаться
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   </div>
+                                </div>
+                                <div class="doctors_specialists_second_item">
+                                    <h2 class="doctors_specialists_second_item_title">Физиолечение</h2>
+                                    <div class="doctors_specialists_second_item_doctor_img_info_parent_wrapper">
+                                    <div class="doctors_specialists_second_item_doctor_img_info_wrapper">
+                                        <div class="doctors_specialists_img_text_wrapper">
+                                            <div class="doctors_specialists_img">
+                                                <img src="./images/vrach_siluet.png">
+                                            </div>
+                                            <div class="doctors_specialists_info_text_wrapper">
+                                                <div class="doctors_specialists_second_name_position_wrapper">
+                                                    <p class="doctors_specialists_second_name">Капчук Иван Николаевич</p>
+                                                    <p class="doctors_specialists_second_position">Главный врач</p>
+                                                </div>
+                                                <div class="doctors_specialists_second_info_details_wrapper">
+                                                    <p class="doctors_specialists_second_item_info1">
+                                                        <span>Образование:</span>
+                                                        Новосибирская государственная медицинская академия, специальность лечебное дело, врач, 2000г.
+                                                    </p>
+                                                    <p class="doctors_specialists_second_item_info1 hidden_info">
+                                                        <span>Карьера:</span> <br>
+                                                        • Отделение восстановительного лечения АНО «Клиника НИИТО»,
+                                                        2011-2021г. <br>
+                                                        • Частная практика медицинский центр «Хорошие врачи», 2012-2021г.
+                                                    </p>
+                                                </div>
+                                                <a href="" class="doctors_specialists_info_link">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="31"
+                                                        viewBox="0 0 27 31">
+                                                        <g>
+                                                            <g>
+                                                                <image width="27" height="31"
+                                                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAfCAYAAAAWRbZDAAAAAXNSR0IArs4c6QAAAs5JREFUSEut113I3nMYB/DPE7HktTTLGcqBvIUhcyBHcuJ9NlLTkiNTCFvsZAp5aTshBwo9aJLNwWZlwlYoyluK8jLL6yZjtRab0ffp+tvf3fN/7vvvua+6u+/f739dv+//un7f6+WecFCux604E4e39vv+/A1b8SA+bRtP1GIV7ut76gj6l+DtRi9gl2NDbXyHp5G3+z+S807CbWW8H8fj96zz8F1ciO0VwqkHs5TL8FqdcTceacB24VjcjwdmCdI2/xBn4yWED1Oe/YrjcCceHyPYG7gUa7GoAdtZcV1RDBoXXhh5MV7AjV1gh+IOXNAT9S88g41lNxLYPPzYE6hRj92JfcDi2b04rydgPHsOr/YB64nRqT5SGMcF9gHOxXpc1UWQOXgK5/dETRifqE9M3yuSTeKmLrAT8FNPoEb9G5xciyR0PEr5S3WaSurp8uxaLOgJmDr4PD7qsusC64kzmvpMYEfOcMTf2DMEItexEEdVsX9zOrCjsak6QNd5B/AKlnQoXI1n0X7hyenA5uLnEQKzF0dMo3dF0T2PUuQPwTEzEWQ+zhkSxlT1rwZ0rquW0mzfgBeRdnPWOAlyJdYNgH9RjflRLB0XWIiQvhVJKj2JlbVOSuQzZxxgSdyQJfJnhf+zqkBbWpPattmCLa7m2AClxH1cwOnOYeRh2IaLZgN2GuJB5I+6m6Z6pPk+Vs/S4zKL/tKeQe5qKYzAfGuwDPuq931SRpmmHq7fqZWZ3HY01M+MmDxYjodGQSmd0D5FN6FqkjtDU5gX+SF0j0fNmfGs6TtfIqHJmw6T02u0TiW5pap6curmMswdZYaZ8qgNdg1ero3Pq5ftHkDLzP5+a++eikJqZIbazJ2NfF+M/A9QE8Z8r8btQ9w5BV+XTu7njAH9gGxG7v7f0A161qwTjqU4teja1vsW+ZOQhI2EAAlZKsRbeB3vVPJ2vvM/qNC5torYboIAAAAASUVORK5CYII=" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    Записаться
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="doctors_specialists_second_item_doctor_img_info_wrapper">
+                                        <div class="doctors_specialists_img_text_wrapper">
+                                            <div class="doctors_specialists_img">
+                                                <img src="./images/vrach_siluet.png">
+                                            </div>
+                                            <div class="doctors_specialists_info_text_wrapper">
+                                                <div class="doctors_specialists_second_name_position_wrapper">
+                                                    <p class="doctors_specialists_second_name">Капчук Иван Николаевич</p>
+                                                    <p class="doctors_specialists_second_position">Главный врач</p>
+                                                </div>
+                                                <div class="doctors_specialists_second_info_details_wrapper">
+                                                    <p class="doctors_specialists_second_item_info1">
+                                                        <span>Образование:</span>
+                                                        Новосибирская государственная медицинская академия, специальность лечебное дело, врач, 2000г.
+                                                    </p>
+                                                    <p class="doctors_specialists_second_item_info1 hidden_info">
+                                                        <span>Карьера:</span> <br>
+                                                        • Отделение восстановительного лечения АНО «Клиника НИИТО»,
+                                                        2011-2021г. <br>
+                                                        • Частная практика медицинский центр «Хорошие врачи», 2012-2021г.
+                                                    </p>
+                                                </div>
+                                                <a href="" class="doctors_specialists_info_link">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="31"
+                                                        viewBox="0 0 27 31">
+                                                        <g>
+                                                            <g>
+                                                                <image width="27" height="31"
+                                                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAfCAYAAAAWRbZDAAAAAXNSR0IArs4c6QAAAs5JREFUSEut113I3nMYB/DPE7HktTTLGcqBvIUhcyBHcuJ9NlLTkiNTCFvsZAp5aTshBwo9aJLNwWZlwlYoyluK8jLL6yZjtRab0ffp+tvf3fN/7vvvua+6u+/f739dv+//un7f6+WecFCux604E4e39vv+/A1b8SA+bRtP1GIV7ut76gj6l+DtRi9gl2NDbXyHp5G3+z+S807CbWW8H8fj96zz8F1ciO0VwqkHs5TL8FqdcTceacB24VjcjwdmCdI2/xBn4yWED1Oe/YrjcCceHyPYG7gUa7GoAdtZcV1RDBoXXhh5MV7AjV1gh+IOXNAT9S88g41lNxLYPPzYE6hRj92JfcDi2b04rydgPHsOr/YB64nRqT5SGMcF9gHOxXpc1UWQOXgK5/dETRifqE9M3yuSTeKmLrAT8FNPoEb9G5xciyR0PEr5S3WaSurp8uxaLOgJmDr4PD7qsusC64kzmvpMYEfOcMTf2DMEItexEEdVsX9zOrCjsak6QNd5B/AKlnQoXI1n0X7hyenA5uLnEQKzF0dMo3dF0T2PUuQPwTEzEWQ+zhkSxlT1rwZ0rquW0mzfgBeRdnPWOAlyJdYNgH9RjflRLB0XWIiQvhVJKj2JlbVOSuQzZxxgSdyQJfJnhf+zqkBbWpPattmCLa7m2AClxH1cwOnOYeRh2IaLZgN2GuJB5I+6m6Z6pPk+Vs/S4zKL/tKeQe5qKYzAfGuwDPuq931SRpmmHq7fqZWZ3HY01M+MmDxYjodGQSmd0D5FN6FqkjtDU5gX+SF0j0fNmfGs6TtfIqHJmw6T02u0TiW5pap6curmMswdZYaZ8qgNdg1ero3Pq5ftHkDLzP5+a++eikJqZIbazJ2NfF+M/A9QE8Z8r8btQ9w5BV+XTu7njAH9gGxG7v7f0A161qwTjqU4teja1vsW+ZOQhI2EAAlZKsRbeB3vVPJ2vvM/qNC5torYboIAAAAASUVORK5CYII=" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    Записаться
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="doctors_specialists_second_item_doctor_img_info_wrapper">
+                                        <div class="doctors_specialists_img_text_wrapper">
+                                            <div class="doctors_specialists_img">
+                                                <img src="./images/vrach_siluet.png">
+                                            </div>
+                                            <div class="doctors_specialists_info_text_wrapper">
+                                                <div class="doctors_specialists_second_name_position_wrapper">
+                                                    <p class="doctors_specialists_second_name"> Иванова Алина Дмитриевна</p>
+                                                    <p class="doctors_specialists_second_position">Врач  травматолог-ортопед</p>
+                                                </div>
+                                                <div class="doctors_specialists_second_info_details_wrapper">
+                                                    <p class="doctors_specialists_second_item_info1">
+                                                        <span>Образование:</span>
+                                                        Новосибирская государственная медицинская академия, специальность лечебное дело, врач, 2000г.
+                                                    </p>
+                                                    <p class="doctors_specialists_second_item_info1 hidden_info">
+                                                        <span>Карьера:</span> <br>
+                                                        • Отделение восстановительного лечения АНО «Клиника НИИТО»,
+                                                        2011-2021г. <br>
+                                                        • Частная практика медицинский центр «Хорошие врачи», 2012-2021г.
+                                                    </p>
+                                                </div>
+                                                <a href="" class="doctors_specialists_info_link">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="31"
+                                                        viewBox="0 0 27 31">
+                                                        <g>
+                                                            <g>
+                                                                <image width="27" height="31"
+                                                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAfCAYAAAAWRbZDAAAAAXNSR0IArs4c6QAAAs5JREFUSEut113I3nMYB/DPE7HktTTLGcqBvIUhcyBHcuJ9NlLTkiNTCFvsZAp5aTshBwo9aJLNwWZlwlYoyluK8jLL6yZjtRab0ffp+tvf3fN/7vvvua+6u+/f739dv+//un7f6+WecFCux604E4e39vv+/A1b8SA+bRtP1GIV7ut76gj6l+DtRi9gl2NDbXyHp5G3+z+S807CbWW8H8fj96zz8F1ciO0VwqkHs5TL8FqdcTceacB24VjcjwdmCdI2/xBn4yWED1Oe/YrjcCceHyPYG7gUa7GoAdtZcV1RDBoXXhh5MV7AjV1gh+IOXNAT9S88g41lNxLYPPzYE6hRj92JfcDi2b04rydgPHsOr/YB64nRqT5SGMcF9gHOxXpc1UWQOXgK5/dETRifqE9M3yuSTeKmLrAT8FNPoEb9G5xciyR0PEr5S3WaSurp8uxaLOgJmDr4PD7qsusC64kzmvpMYEfOcMTf2DMEItexEEdVsX9zOrCjsak6QNd5B/AKlnQoXI1n0X7hyenA5uLnEQKzF0dMo3dF0T2PUuQPwTEzEWQ+zhkSxlT1rwZ0rquW0mzfgBeRdnPWOAlyJdYNgH9RjflRLB0XWIiQvhVJKj2JlbVOSuQzZxxgSdyQJfJnhf+zqkBbWpPattmCLa7m2AClxH1cwOnOYeRh2IaLZgN2GuJB5I+6m6Z6pPk+Vs/S4zKL/tKeQe5qKYzAfGuwDPuq931SRpmmHq7fqZWZ3HY01M+MmDxYjodGQSmd0D5FN6FqkjtDU5gX+SF0j0fNmfGs6TtfIqHJmw6T02u0TiW5pap6curmMswdZYaZ8qgNdg1ero3Pq5ftHkDLzP5+a++eikJqZIbazJ2NfF+M/A9QE8Z8r8btQ9w5BV+XTu7njAH9gGxG7v7f0A161qwTjqU4teja1vsW+ZOQhI2EAAlZKsRbeB3vVPJ2vvM/qNC5torYboIAAAAASUVORK5CYII=" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    Записаться
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   </div>
+                                </div>
+                                <div class="doctors_specialists_second_item">
+                                    <h2 class="doctors_specialists_second_item_title">Массаж, ЛФК, EXOS</h2>
+                                    <div class="doctors_specialists_second_item_doctor_img_info_parent_wrapper">                             
+                                     <div class="doctors_specialists_second_item_doctor_img_info_wrapper">
+                                        <div class="doctors_specialists_img_text_wrapper">
+                                            <div class="doctors_specialists_img">
+                                                <img src="./images/vrach_siluet.png">
+                                            </div>
+                                            <div class="doctors_specialists_info_text_wrapper">
+                                                <div class="doctors_specialists_second_name_position_wrapper">
+                                                    <p class="doctors_specialists_second_name">Капчук Иван Николаевич</p>
+                                                    <p class="doctors_specialists_second_position">Главный врач</p>
+                                                </div>
+                                                <div class="doctors_specialists_second_info_details_wrapper">
+                                                    <p class="doctors_specialists_second_item_info1">
+                                                        <span>Образование:</span>
+                                                        Новосибирская государственная медицинская академия, специальность лечебное дело, врач, 2000г.
+                                                    </p>
+                                                    <p class="doctors_specialists_second_item_info1 hidden_info">
+                                                        <span>Карьера:</span> <br>
+                                                        • Отделение восстановительного лечения АНО «Клиника НИИТО»,
+                                                        2011-2021г. <br>
+                                                        • Частная практика медицинский центр «Хорошие врачи», 2012-2021г.
+                                                    </p>
+                                                </div>
+                                                <a href="" class="doctors_specialists_info_link">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="31"
+                                                        viewBox="0 0 27 31">
+                                                        <g>
+                                                            <g>
+                                                                <image width="27" height="31"
+                                                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAfCAYAAAAWRbZDAAAAAXNSR0IArs4c6QAAAs5JREFUSEut113I3nMYB/DPE7HktTTLGcqBvIUhcyBHcuJ9NlLTkiNTCFvsZAp5aTshBwo9aJLNwWZlwlYoyluK8jLL6yZjtRab0ffp+tvf3fN/7vvvua+6u+/f739dv+//un7f6+WecFCux604E4e39vv+/A1b8SA+bRtP1GIV7ut76gj6l+DtRi9gl2NDbXyHp5G3+z+S807CbWW8H8fj96zz8F1ciO0VwqkHs5TL8FqdcTceacB24VjcjwdmCdI2/xBn4yWED1Oe/YrjcCceHyPYG7gUa7GoAdtZcV1RDBoXXhh5MV7AjV1gh+IOXNAT9S88g41lNxLYPPzYE6hRj92JfcDi2b04rydgPHsOr/YB64nRqT5SGMcF9gHOxXpc1UWQOXgK5/dETRifqE9M3yuSTeKmLrAT8FNPoEb9G5xciyR0PEr5S3WaSurp8uxaLOgJmDr4PD7qsusC64kzmvpMYEfOcMTf2DMEItexEEdVsX9zOrCjsak6QNd5B/AKlnQoXI1n0X7hyenA5uLnEQKzF0dMo3dF0T2PUuQPwTEzEWQ+zhkSxlT1rwZ0rquW0mzfgBeRdnPWOAlyJdYNgH9RjflRLB0XWIiQvhVJKj2JlbVOSuQzZxxgSdyQJfJnhf+zqkBbWpPattmCLa7m2AClxH1cwOnOYeRh2IaLZgN2GuJB5I+6m6Z6pPk+Vs/S4zKL/tKeQe5qKYzAfGuwDPuq931SRpmmHq7fqZWZ3HY01M+MmDxYjodGQSmd0D5FN6FqkjtDU5gX+SF0j0fNmfGs6TtfIqHJmw6T02u0TiW5pap6curmMswdZYaZ8qgNdg1ero3Pq5ftHkDLzP5+a++eikJqZIbazJ2NfF+M/A9QE8Z8r8btQ9w5BV+XTu7njAH9gGxG7v7f0A161qwTjqU4teja1vsW+ZOQhI2EAAlZKsRbeB3vVPJ2vvM/qNC5torYboIAAAAASUVORK5CYII=" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    Записаться
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="doctors_specialists_second_item_doctor_img_info_wrapper">
+                                        <div class="doctors_specialists_img_text_wrapper">
+                                            <div class="doctors_specialists_img">
+                                                <img src="./images/vrach_siluet.png">
+                                            </div>
+                                            <div class="doctors_specialists_info_text_wrapper">
+                                                <div class="doctors_specialists_second_name_position_wrapper">
+                                                    <p class="doctors_specialists_second_name"> Иванова Алина Дмитриевна</p>
+                                                    <p class="doctors_specialists_second_position">Врач  травматолог-ортопед</p>
+                                                </div>
+                                                <div class="doctors_specialists_second_info_details_wrapper">
+                                                    <p class="doctors_specialists_second_item_info1">
+                                                        <span>Образование:</span>
+                                                        Новосибирская государственная медицинская академия, специальность лечебное дело, врач, 2000г.
+                                                    </p>
+                                                    <p class="doctors_specialists_second_item_info1 hidden_info">
+                                                        <span>Карьера:</span> <br>
+                                                        • Отделение восстановительного лечения АНО «Клиника НИИТО»,
+                                                        2011-2021г. <br>
+                                                        • Частная практика медицинский центр «Хорошие врачи», 2012-2021г.
+                                                    </p>
+                                                </div>
+                                                <a href="" class="doctors_specialists_info_link">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="31"
+                                                        viewBox="0 0 27 31">
+                                                        <g>
+                                                            <g>
+                                                                <image width="27" height="31"
+                                                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAfCAYAAAAWRbZDAAAAAXNSR0IArs4c6QAAAs5JREFUSEut113I3nMYB/DPE7HktTTLGcqBvIUhcyBHcuJ9NlLTkiNTCFvsZAp5aTshBwo9aJLNwWZlwlYoyluK8jLL6yZjtRab0ffp+tvf3fN/7vvvua+6u+/f739dv+//un7f6+WecFCux604E4e39vv+/A1b8SA+bRtP1GIV7ut76gj6l+DtRi9gl2NDbXyHp5G3+z+S807CbWW8H8fj96zz8F1ciO0VwqkHs5TL8FqdcTceacB24VjcjwdmCdI2/xBn4yWED1Oe/YrjcCceHyPYG7gUa7GoAdtZcV1RDBoXXhh5MV7AjV1gh+IOXNAT9S88g41lNxLYPPzYE6hRj92JfcDi2b04rydgPHsOr/YB64nRqT5SGMcF9gHOxXpc1UWQOXgK5/dETRifqE9M3yuSTeKmLrAT8FNPoEb9G5xciyR0PEr5S3WaSurp8uxaLOgJmDr4PD7qsusC64kzmvpMYEfOcMTf2DMEItexEEdVsX9zOrCjsak6QNd5B/AKlnQoXI1n0X7hyenA5uLnEQKzF0dMo3dF0T2PUuQPwTEzEWQ+zhkSxlT1rwZ0rquW0mzfgBeRdnPWOAlyJdYNgH9RjflRLB0XWIiQvhVJKj2JlbVOSuQzZxxgSdyQJfJnhf+zqkBbWpPattmCLa7m2AClxH1cwOnOYeRh2IaLZgN2GuJB5I+6m6Z6pPk+Vs/S4zKL/tKeQe5qKYzAfGuwDPuq931SRpmmHq7fqZWZ3HY01M+MmDxYjodGQSmd0D5FN6FqkjtDU5gX+SF0j0fNmfGs6TtfIqHJmw6T02u0TiW5pap6curmMswdZYaZ8qgNdg1ero3Pq5ftHkDLzP5+a++eikJqZIbazJ2NfF+M/A9QE8Z8r8btQ9w5BV+XTu7njAH9gGxG7v7f0A161qwTjqU4teja1vsW+ZOQhI2EAAlZKsRbeB3vVPJ2vvM/qNC5torYboIAAAAASUVORK5CYII=" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    Записаться
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div> 
+                                </div>
+                                <div class="doctors_specialists_second_item">
+                                    <h2 class="doctors_specialists_second_item_title">Кинезиотейпирование</h2>
+                                   <div class="doctors_specialists_second_item_doctor_img_info_parent_wrapper">
+                                    <div class="doctors_specialists_second_item_doctor_img_info_wrapper">
+                                        <div class="doctors_specialists_img_text_wrapper">
+                                            <div class="doctors_specialists_img">
+                                                <img src="./images/vrach_siluet.png">
+                                            </div>
+                                            <div class="doctors_specialists_info_text_wrapper">
+                                                <div class="doctors_specialists_second_name_position_wrapper">
+                                                    <p class="doctors_specialists_second_name">Капчук Иван Николаевич</p>
+                                                    <p class="doctors_specialists_second_position">Главный врач</p>
+                                                </div>
+                                                <div class="doctors_specialists_second_info_details_wrapper">
+                                                    <p class="doctors_specialists_second_item_info1">
+                                                        <span>Образование:</span>
+                                                        Новосибирская государственная медицинская академия, специальность лечебное дело, врач, 2000г.
+                                                    </p>
+                                                    <p class="doctors_specialists_second_item_info1 hidden_info">
+                                                        <span>Карьера:</span> <br>
+                                                        • Отделение восстановительного лечения АНО «Клиника НИИТО»,
+                                                        2011-2021г. <br>
+                                                        • Частная практика медицинский центр «Хорошие врачи», 2012-2021г.
+                                                    </p>
+                                                </div>
+                                                <a href="" class="doctors_specialists_info_link">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="31"
+                                                        viewBox="0 0 27 31">
+                                                        <g>
+                                                            <g>
+                                                                <image width="27" height="31"
+                                                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAfCAYAAAAWRbZDAAAAAXNSR0IArs4c6QAAAs5JREFUSEut113I3nMYB/DPE7HktTTLGcqBvIUhcyBHcuJ9NlLTkiNTCFvsZAp5aTshBwo9aJLNwWZlwlYoyluK8jLL6yZjtRab0ffp+tvf3fN/7vvvua+6u+/f739dv+//un7f6+WecFCux604E4e39vv+/A1b8SA+bRtP1GIV7ut76gj6l+DtRi9gl2NDbXyHp5G3+z+S807CbWW8H8fj96zz8F1ciO0VwqkHs5TL8FqdcTceacB24VjcjwdmCdI2/xBn4yWED1Oe/YrjcCceHyPYG7gUa7GoAdtZcV1RDBoXXhh5MV7AjV1gh+IOXNAT9S88g41lNxLYPPzYE6hRj92JfcDi2b04rydgPHsOr/YB64nRqT5SGMcF9gHOxXpc1UWQOXgK5/dETRifqE9M3yuSTeKmLrAT8FNPoEb9G5xciyR0PEr5S3WaSurp8uxaLOgJmDr4PD7qsusC64kzmvpMYEfOcMTf2DMEItexEEdVsX9zOrCjsak6QNd5B/AKlnQoXI1n0X7hyenA5uLnEQKzF0dMo3dF0T2PUuQPwTEzEWQ+zhkSxlT1rwZ0rquW0mzfgBeRdnPWOAlyJdYNgH9RjflRLB0XWIiQvhVJKj2JlbVOSuQzZxxgSdyQJfJnhf+zqkBbWpPattmCLa7m2AClxH1cwOnOYeRh2IaLZgN2GuJB5I+6m6Z6pPk+Vs/S4zKL/tKeQe5qKYzAfGuwDPuq931SRpmmHq7fqZWZ3HY01M+MmDxYjodGQSmd0D5FN6FqkjtDU5gX+SF0j0fNmfGs6TtfIqHJmw6T02u0TiW5pap6curmMswdZYaZ8qgNdg1ero3Pq5ftHkDLzP5+a++eikJqZIbazJ2NfF+M/A9QE8Z8r8btQ9w5BV+XTu7njAH9gGxG7v7f0A161qwTjqU4teja1vsW+ZOQhI2EAAlZKsRbeB3vVPJ2vvM/qNC5torYboIAAAAASUVORK5CYII=" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    Записаться
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="doctors_specialists_second_item_doctor_img_info_wrapper">
+                                        <div class="doctors_specialists_img_text_wrapper">
+                                            <div class="doctors_specialists_img">
+                                                <img src="./images/vrach_siluet.png">
+                                            </div>
+                                            <div class="doctors_specialists_info_text_wrapper">
+                                                <div class="doctors_specialists_second_name_position_wrapper">
+                                                    <p class="doctors_specialists_second_name"> Иванова Алина Дмитриевна</p>
+                                                    <p class="doctors_specialists_second_position">Врач  травматолог-ортопед</p>
+                                                </div>
+                                                <div class="doctors_specialists_second_info_details_wrapper">
+                                                    <p class="doctors_specialists_second_item_info1">
+                                                        <span>Образование:</span>
+                                                        Новосибирская государственная медицинская академия, специальность лечебное дело, врач, 2000г.
+                                                    </p>
+                                                    <p class="doctors_specialists_second_item_info1 hidden_info">
+                                                        <span>Карьера:</span> <br>
+                                                        • Отделение восстановительного лечения АНО «Клиника НИИТО»,
+                                                        2011-2021г. <br>
+                                                        • Частная практика медицинский центр «Хорошие врачи», 2012-2021г.
+                                                    </p>
+                                                </div>
+                                                <a href="" class="doctors_specialists_info_link">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="31"
+                                                        viewBox="0 0 27 31">
+                                                        <g>
+                                                            <g>
+                                                                <image width="27" height="31"
+                                                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAfCAYAAAAWRbZDAAAAAXNSR0IArs4c6QAAAs5JREFUSEut113I3nMYB/DPE7HktTTLGcqBvIUhcyBHcuJ9NlLTkiNTCFvsZAp5aTshBwo9aJLNwWZlwlYoyluK8jLL6yZjtRab0ffp+tvf3fN/7vvvua+6u+/f739dv+//un7f6+WecFCux604E4e39vv+/A1b8SA+bRtP1GIV7ut76gj6l+DtRi9gl2NDbXyHp5G3+z+S807CbWW8H8fj96zz8F1ciO0VwqkHs5TL8FqdcTceacB24VjcjwdmCdI2/xBn4yWED1Oe/YrjcCceHyPYG7gUa7GoAdtZcV1RDBoXXhh5MV7AjV1gh+IOXNAT9S88g41lNxLYPPzYE6hRj92JfcDi2b04rydgPHsOr/YB64nRqT5SGMcF9gHOxXpc1UWQOXgK5/dETRifqE9M3yuSTeKmLrAT8FNPoEb9G5xciyR0PEr5S3WaSurp8uxaLOgJmDr4PD7qsusC64kzmvpMYEfOcMTf2DMEItexEEdVsX9zOrCjsak6QNd5B/AKlnQoXI1n0X7hyenA5uLnEQKzF0dMo3dF0T2PUuQPwTEzEWQ+zhkSxlT1rwZ0rquW0mzfgBeRdnPWOAlyJdYNgH9RjflRLB0XWIiQvhVJKj2JlbVOSuQzZxxgSdyQJfJnhf+zqkBbWpPattmCLa7m2AClxH1cwOnOYeRh2IaLZgN2GuJB5I+6m6Z6pPk+Vs/S4zKL/tKeQe5qKYzAfGuwDPuq931SRpmmHq7fqZWZ3HY01M+MmDxYjodGQSmd0D5FN6FqkjtDU5gX+SF0j0fNmfGs6TtfIqHJmw6T02u0TiW5pap6curmMswdZYaZ8qgNdg1ero3Pq5ftHkDLzP5+a++eikJqZIbazJ2NfF+M/A9QE8Z8r8btQ9w5BV+XTu7njAH9gGxG7v7f0A161qwTjqU4teja1vsW+ZOQhI2EAAlZKsRbeB3vVPJ2vvM/qNC5torYboIAAAAASUVORK5CYII=" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    Записаться
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="doctors_specialists_second_item_doctor_img_info_wrapper">
+                                        <div class="doctors_specialists_img_text_wrapper">
+                                            <div class="doctors_specialists_img">
+                                                <img src="./images/vrach_siluet.png">
+                                            </div>
+                                            <div class="doctors_specialists_info_text_wrapper">
+                                                <div class="doctors_specialists_second_name_position_wrapper">
+                                                    <p class="doctors_specialists_second_name"> Иванова Алина Дмитриевна</p>
+                                                    <p class="doctors_specialists_second_position">Врач  травматолог-ортопед</p>
+                                                </div>
+                                                <div class="doctors_specialists_second_info_details_wrapper">
+                                                    <p class="doctors_specialists_second_item_info1">
+                                                        <span>Образование:</span>
+                                                        Новосибирская государственная медицинская академия, специальность лечебное дело, врач, 2000г.
+                                                    </p>
+                                                    <p class="doctors_specialists_second_item_info1 hidden_info">
+                                                        <span>Карьера:</span> <br>
+                                                        • Отделение восстановительного лечения АНО «Клиника НИИТО»,
+                                                        2011-2021г. <br>
+                                                        • Частная практика медицинский центр «Хорошие врачи», 2012-2021г.
+                                                    </p>
+                                                </div>
+                                                <a href="" class="doctors_specialists_info_link">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="31"
+                                                        viewBox="0 0 27 31">
+                                                        <g>
+                                                            <g>
+                                                                <image width="27" height="31"
+                                                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAfCAYAAAAWRbZDAAAAAXNSR0IArs4c6QAAAs5JREFUSEut113I3nMYB/DPE7HktTTLGcqBvIUhcyBHcuJ9NlLTkiNTCFvsZAp5aTshBwo9aJLNwWZlwlYoyluK8jLL6yZjtRab0ffp+tvf3fN/7vvvua+6u+/f739dv+//un7f6+WecFCux604E4e39vv+/A1b8SA+bRtP1GIV7ut76gj6l+DtRi9gl2NDbXyHp5G3+z+S807CbWW8H8fj96zz8F1ciO0VwqkHs5TL8FqdcTceacB24VjcjwdmCdI2/xBn4yWED1Oe/YrjcCceHyPYG7gUa7GoAdtZcV1RDBoXXhh5MV7AjV1gh+IOXNAT9S88g41lNxLYPPzYE6hRj92JfcDi2b04rydgPHsOr/YB64nRqT5SGMcF9gHOxXpc1UWQOXgK5/dETRifqE9M3yuSTeKmLrAT8FNPoEb9G5xciyR0PEr5S3WaSurp8uxaLOgJmDr4PD7qsusC64kzmvpMYEfOcMTf2DMEItexEEdVsX9zOrCjsak6QNd5B/AKlnQoXI1n0X7hyenA5uLnEQKzF0dMo3dF0T2PUuQPwTEzEWQ+zhkSxlT1rwZ0rquW0mzfgBeRdnPWOAlyJdYNgH9RjflRLB0XWIiQvhVJKj2JlbVOSuQzZxxgSdyQJfJnhf+zqkBbWpPattmCLa7m2AClxH1cwOnOYeRh2IaLZgN2GuJB5I+6m6Z6pPk+Vs/S4zKL/tKeQe5qKYzAfGuwDPuq931SRpmmHq7fqZWZ3HY01M+MmDxYjodGQSmd0D5FN6FqkjtDU5gX+SF0j0fNmfGs6TtfIqHJmw6T02u0TiW5pap6curmMswdZYaZ8qgNdg1ero3Pq5ftHkDLzP5+a++eikJqZIbazJ2NfF+M/A9QE8Z8r8btQ9w5BV+XTu7njAH9gGxG7v7f0A161qwTjqU4teja1vsW+ZOQhI2EAAlZKsRbeB3vVPJ2vvM/qNC5torYboIAAAAASUVORK5CYII=" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    Записаться
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="doctors_specialists_second_item">
+                                    <h2 class="doctors_specialists_second_item_title">Мануальная терапия</h2>
+                                   <div class="doctors_specialists_second_item_doctor_img_info_parent_wrapper">
+                                    <div class="doctors_specialists_second_item_doctor_img_info_wrapper">
+                                        <div class="doctors_specialists_img_text_wrapper">
+                                            <div class="doctors_specialists_img">
+                                                <img src="./images/vrach_siluet.png">
+                                            </div>
+                                            <div class="doctors_specialists_info_text_wrapper">
+                                                <div class="doctors_specialists_second_name_position_wrapper">
+                                                    <p class="doctors_specialists_second_name">Капчук Иван Николаевич</p>
+                                                    <p class="doctors_specialists_second_position">Главный врач</p>
+                                                </div>
+                                                <div class="doctors_specialists_second_info_details_wrapper">
+                                                    <p class="doctors_specialists_second_item_info1">
+                                                        <span>Образование:</span>
+                                                        Новосибирская государственная медицинская академия, специальность лечебное дело, врач, 2000г.
+                                                    </p>
+                                                    <p class="doctors_specialists_second_item_info1 hidden_info">
+                                                        <span>Карьера:</span> <br>
+                                                        • Отделение восстановительного лечения АНО «Клиника НИИТО»,
+                                                        2011-2021г. <br>
+                                                        • Частная практика медицинский центр «Хорошие врачи», 2012-2021г.
+                                                    </p>
+                                                </div>
+                                                <a href="" class="doctors_specialists_info_link">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="31"
+                                                        viewBox="0 0 27 31">
+                                                        <g>
+                                                            <g>
+                                                                <image width="27" height="31"
+                                                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAfCAYAAAAWRbZDAAAAAXNSR0IArs4c6QAAAs5JREFUSEut113I3nMYB/DPE7HktTTLGcqBvIUhcyBHcuJ9NlLTkiNTCFvsZAp5aTshBwo9aJLNwWZlwlYoyluK8jLL6yZjtRab0ffp+tvf3fN/7vvvua+6u+/f739dv+//un7f6+WecFCux604E4e39vv+/A1b8SA+bRtP1GIV7ut76gj6l+DtRi9gl2NDbXyHp5G3+z+S807CbWW8H8fj96zz8F1ciO0VwqkHs5TL8FqdcTceacB24VjcjwdmCdI2/xBn4yWED1Oe/YrjcCceHyPYG7gUa7GoAdtZcV1RDBoXXhh5MV7AjV1gh+IOXNAT9S88g41lNxLYPPzYE6hRj92JfcDi2b04rydgPHsOr/YB64nRqT5SGMcF9gHOxXpc1UWQOXgK5/dETRifqE9M3yuSTeKmLrAT8FNPoEb9G5xciyR0PEr5S3WaSurp8uxaLOgJmDr4PD7qsusC64kzmvpMYEfOcMTf2DMEItexEEdVsX9zOrCjsak6QNd5B/AKlnQoXI1n0X7hyenA5uLnEQKzF0dMo3dF0T2PUuQPwTEzEWQ+zhkSxlT1rwZ0rquW0mzfgBeRdnPWOAlyJdYNgH9RjflRLB0XWIiQvhVJKj2JlbVOSuQzZxxgSdyQJfJnhf+zqkBbWpPattmCLa7m2AClxH1cwOnOYeRh2IaLZgN2GuJB5I+6m6Z6pPk+Vs/S4zKL/tKeQe5qKYzAfGuwDPuq931SRpmmHq7fqZWZ3HY01M+MmDxYjodGQSmd0D5FN6FqkjtDU5gX+SF0j0fNmfGs6TtfIqHJmw6T02u0TiW5pap6curmMswdZYaZ8qgNdg1ero3Pq5ftHkDLzP5+a++eikJqZIbazJ2NfF+M/A9QE8Z8r8btQ9w5BV+XTu7njAH9gGxG7v7f0A161qwTjqU4teja1vsW+ZOQhI2EAAlZKsRbeB3vVPJ2vvM/qNC5torYboIAAAAASUVORK5CYII=" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    Записаться
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="doctors_specialists_second_item_doctor_img_info_wrapper">
+                                        <div class="doctors_specialists_img_text_wrapper">
+                                            <div class="doctors_specialists_img">
+                                                <img src="./images/vrach_siluet.png">
+                                            </div>
+                                            <div class="doctors_specialists_info_text_wrapper">
+                                                <div class="doctors_specialists_second_name_position_wrapper">
+                                                    <p class="doctors_specialists_second_name"> Иванова Алина Дмитриевна</p>
+                                                    <p class="doctors_specialists_second_position">Врач  травматолог-ортопед</p>
+                                                </div>
+                                                <div class="doctors_specialists_second_info_details_wrapper">
+                                                    <p class="doctors_specialists_second_item_info1">
+                                                        <span>Образование:</span>
+                                                        Новосибирская государственная медицинская академия, специальность лечебное дело, врач, 2000г.
+                                                    </p>
+                                                    <p class="doctors_specialists_second_item_info1 hidden_info">
+                                                        <span>Карьера:</span> <br>
+                                                        • Отделение восстановительного лечения АНО «Клиника НИИТО»,
+                                                        2011-2021г. <br>
+                                                        • Частная практика медицинский центр «Хорошие врачи», 2012-2021г.
+                                                    </p>
+                                                </div>
+                                                <a href="" class="doctors_specialists_info_link">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="31"
+                                                        viewBox="0 0 27 31">
+                                                        <g>
+                                                            <g>
+                                                                <image width="27" height="31"
+                                                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAfCAYAAAAWRbZDAAAAAXNSR0IArs4c6QAAAs5JREFUSEut113I3nMYB/DPE7HktTTLGcqBvIUhcyBHcuJ9NlLTkiNTCFvsZAp5aTshBwo9aJLNwWZlwlYoyluK8jLL6yZjtRab0ffp+tvf3fN/7vvvua+6u+/f739dv+//un7f6+WecFCux604E4e39vv+/A1b8SA+bRtP1GIV7ut76gj6l+DtRi9gl2NDbXyHp5G3+z+S807CbWW8H8fj96zz8F1ciO0VwqkHs5TL8FqdcTceacB24VjcjwdmCdI2/xBn4yWED1Oe/YrjcCceHyPYG7gUa7GoAdtZcV1RDBoXXhh5MV7AjV1gh+IOXNAT9S88g41lNxLYPPzYE6hRj92JfcDi2b04rydgPHsOr/YB64nRqT5SGMcF9gHOxXpc1UWQOXgK5/dETRifqE9M3yuSTeKmLrAT8FNPoEb9G5xciyR0PEr5S3WaSurp8uxaLOgJmDr4PD7qsusC64kzmvpMYEfOcMTf2DMEItexEEdVsX9zOrCjsak6QNd5B/AKlnQoXI1n0X7hyenA5uLnEQKzF0dMo3dF0T2PUuQPwTEzEWQ+zhkSxlT1rwZ0rquW0mzfgBeRdnPWOAlyJdYNgH9RjflRLB0XWIiQvhVJKj2JlbVOSuQzZxxgSdyQJfJnhf+zqkBbWpPattmCLa7m2AClxH1cwOnOYeRh2IaLZgN2GuJB5I+6m6Z6pPk+Vs/S4zKL/tKeQe5qKYzAfGuwDPuq931SRpmmHq7fqZWZ3HY01M+MmDxYjodGQSmd0D5FN6FqkjtDU5gX+SF0j0fNmfGs6TtfIqHJmw6T02u0TiW5pap6curmMswdZYaZ8qgNdg1ero3Pq5ftHkDLzP5+a++eikJqZIbazJ2NfF+M/A9QE8Z8r8btQ9w5BV+XTu7njAH9gGxG7v7f0A161qwTjqU4teja1vsW+ZOQhI2EAAlZKsRbeB3vVPJ2vvM/qNC5torYboIAAAAASUVORK5CYII=" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    Записаться
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="doctors_specialists_second_item_doctor_img_info_wrapper">
+                                        <div class="doctors_specialists_img_text_wrapper">
+                                            <div class="doctors_specialists_img">
+                                                <img src="./images/vrach_siluet.png">
+                                            </div>
+                                            <div class="doctors_specialists_info_text_wrapper">
+                                                <div class="doctors_specialists_second_name_position_wrapper">
+                                                    <p class="doctors_specialists_second_name"> Иванова Алина Дмитриевна</p>
+                                                    <p class="doctors_specialists_second_position">Врач  травматолог-ортопед</p>
+                                                </div>
+                                                <div class="doctors_specialists_second_info_details_wrapper">
+                                                    <p class="doctors_specialists_second_item_info1">
+                                                        <span>Образование:</span>
+                                                        Новосибирская государственная медицинская академия, специальность лечебное дело, врач, 2000г.
+                                                    </p>
+                                                    <p class="doctors_specialists_second_item_info1 hidden_info">
+                                                        <span>Карьера:</span> <br>
+                                                        • Отделение восстановительного лечения АНО «Клиника НИИТО»,
+                                                        2011-2021г. <br>
+                                                        • Частная практика медицинский центр «Хорошие врачи», 2012-2021г.
+                                                    </p>
+                                                </div>
+                                                <a href="" class="doctors_specialists_info_link">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="31"
+                                                        viewBox="0 0 27 31">
+                                                        <g>
+                                                            <g>
+                                                                <image width="27" height="31"
+                                                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAfCAYAAAAWRbZDAAAAAXNSR0IArs4c6QAAAs5JREFUSEut113I3nMYB/DPE7HktTTLGcqBvIUhcyBHcuJ9NlLTkiNTCFvsZAp5aTshBwo9aJLNwWZlwlYoyluK8jLL6yZjtRab0ffp+tvf3fN/7vvvua+6u+/f739dv+//un7f6+WecFCux604E4e39vv+/A1b8SA+bRtP1GIV7ut76gj6l+DtRi9gl2NDbXyHp5G3+z+S807CbWW8H8fj96zz8F1ciO0VwqkHs5TL8FqdcTceacB24VjcjwdmCdI2/xBn4yWED1Oe/YrjcCceHyPYG7gUa7GoAdtZcV1RDBoXXhh5MV7AjV1gh+IOXNAT9S88g41lNxLYPPzYE6hRj92JfcDi2b04rydgPHsOr/YB64nRqT5SGMcF9gHOxXpc1UWQOXgK5/dETRifqE9M3yuSTeKmLrAT8FNPoEb9G5xciyR0PEr5S3WaSurp8uxaLOgJmDr4PD7qsusC64kzmvpMYEfOcMTf2DMEItexEEdVsX9zOrCjsak6QNd5B/AKlnQoXI1n0X7hyenA5uLnEQKzF0dMo3dF0T2PUuQPwTEzEWQ+zhkSxlT1rwZ0rquW0mzfgBeRdnPWOAlyJdYNgH9RjflRLB0XWIiQvhVJKj2JlbVOSuQzZxxgSdyQJfJnhf+zqkBbWpPattmCLa7m2AClxH1cwOnOYeRh2IaLZgN2GuJB5I+6m6Z6pPk+Vs/S4zKL/tKeQe5qKYzAfGuwDPuq931SRpmmHq7fqZWZ3HY01M+MmDxYjodGQSmd0D5FN6FqkjtDU5gX+SF0j0fNmfGs6TtfIqHJmw6T02u0TiW5pap6curmMswdZYaZ8qgNdg1ero3Pq5ftHkDLzP5+a++eikJqZIbazJ2NfF+M/A9QE8Z8r8btQ9w5BV+XTu7njAH9gGxG7v7f0A161qwTjqU4teja1vsW+ZOQhI2EAAlZKsRbeB3vVPJ2vvM/qNC5torYboIAAAAASUVORK5CYII=" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    Записаться
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   </div>
+                                </div>
+                                <div class="doctors_specialists_second_item">
+                                    <h2 class="doctors_specialists_second_item_title">Инвазивные методы лечения</h2>
+                                    <div class="doctors_specialists_second_item_doctor_img_info_parent_wrapper">
+                                    <div class="doctors_specialists_second_item_doctor_img_info_wrapper">
+                                        <div class="doctors_specialists_img_text_wrapper">
+                                            <div class="doctors_specialists_img">
+                                                <img src="./images/vrach_siluet.png">
+                                            </div>
+                                            <div class="doctors_specialists_info_text_wrapper">
+                                                <div class="doctors_specialists_second_name_position_wrapper">
+                                                    <p class="doctors_specialists_second_name">Капчук Иван Николаевич</p>
+                                                    <p class="doctors_specialists_second_position">Главный врач</p>
+                                                </div>
+                                                <div class="doctors_specialists_second_info_details_wrapper">
+                                                    <p class="doctors_specialists_second_item_info1">
+                                                        <span>Образование:</span>
+                                                        Новосибирская государственная медицинская академия, специальность лечебное дело, врач, 2000г.
+                                                    </p>
+                                                    <p class="doctors_specialists_second_item_info1 hidden_info">
+                                                        <span>Карьера:</span> <br>
+                                                        • Отделение восстановительного лечения АНО «Клиника НИИТО»,
+                                                        2011-2021г. <br>
+                                                        • Частная практика медицинский центр «Хорошие врачи», 2012-2021г.
+                                                    </p>
+                                                </div>
+                                                <a href="" class="doctors_specialists_info_link">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="31"
+                                                        viewBox="0 0 27 31">
+                                                        <g>
+                                                            <g>
+                                                                <image width="27" height="31"
+                                                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAfCAYAAAAWRbZDAAAAAXNSR0IArs4c6QAAAs5JREFUSEut113I3nMYB/DPE7HktTTLGcqBvIUhcyBHcuJ9NlLTkiNTCFvsZAp5aTshBwo9aJLNwWZlwlYoyluK8jLL6yZjtRab0ffp+tvf3fN/7vvvua+6u+/f739dv+//un7f6+WecFCux604E4e39vv+/A1b8SA+bRtP1GIV7ut76gj6l+DtRi9gl2NDbXyHp5G3+z+S807CbWW8H8fj96zz8F1ciO0VwqkHs5TL8FqdcTceacB24VjcjwdmCdI2/xBn4yWED1Oe/YrjcCceHyPYG7gUa7GoAdtZcV1RDBoXXhh5MV7AjV1gh+IOXNAT9S88g41lNxLYPPzYE6hRj92JfcDi2b04rydgPHsOr/YB64nRqT5SGMcF9gHOxXpc1UWQOXgK5/dETRifqE9M3yuSTeKmLrAT8FNPoEb9G5xciyR0PEr5S3WaSurp8uxaLOgJmDr4PD7qsusC64kzmvpMYEfOcMTf2DMEItexEEdVsX9zOrCjsak6QNd5B/AKlnQoXI1n0X7hyenA5uLnEQKzF0dMo3dF0T2PUuQPwTEzEWQ+zhkSxlT1rwZ0rquW0mzfgBeRdnPWOAlyJdYNgH9RjflRLB0XWIiQvhVJKj2JlbVOSuQzZxxgSdyQJfJnhf+zqkBbWpPattmCLa7m2AClxH1cwOnOYeRh2IaLZgN2GuJB5I+6m6Z6pPk+Vs/S4zKL/tKeQe5qKYzAfGuwDPuq931SRpmmHq7fqZWZ3HY01M+MmDxYjodGQSmd0D5FN6FqkjtDU5gX+SF0j0fNmfGs6TtfIqHJmw6T02u0TiW5pap6curmMswdZYaZ8qgNdg1ero3Pq5ftHkDLzP5+a++eikJqZIbazJ2NfF+M/A9QE8Z8r8btQ9w5BV+XTu7njAH9gGxG7v7f0A161qwTjqU4teja1vsW+ZOQhI2EAAlZKsRbeB3vVPJ2vvM/qNC5torYboIAAAAASUVORK5CYII=" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    Записаться
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="doctors_specialists_second_item_doctor_img_info_wrapper">
+                                        <div class="doctors_specialists_img_text_wrapper">
+                                            <div class="doctors_specialists_img">
+                                                <img src="./images/vrach_siluet.png">
+                                            </div>
+                                            <div class="doctors_specialists_info_text_wrapper">
+                                                <div class="doctors_specialists_second_name_position_wrapper">
+                                                    <p class="doctors_specialists_second_name"> Иванова Алина Дмитриевна</p>
+                                                    <p class="doctors_specialists_second_position">Врач  травматолог-ортопед</p>
+                                                </div>
+                                                <div class="doctors_specialists_second_info_details_wrapper">
+                                                    <p class="doctors_specialists_second_item_info1">
+                                                        <span>Образование:</span>
+                                                        Новосибирская государственная медицинская академия, специальность лечебное дело, врач, 2000г.
+                                                    </p>
+                                                    <p class="doctors_specialists_second_item_info1 hidden_info">
+                                                        <span>Карьера:</span> <br>
+                                                        • Отделение восстановительного лечения АНО «Клиника НИИТО»,
+                                                        2011-2021г. <br>
+                                                        • Частная практика медицинский центр «Хорошие врачи», 2012-2021г.
+                                                    </p>
+                                                </div>
+                                                <a href="" class="doctors_specialists_info_link">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="31"
+                                                        viewBox="0 0 27 31">
+                                                        <g>
+                                                            <g>
+                                                                <image width="27" height="31"
+                                                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAfCAYAAAAWRbZDAAAAAXNSR0IArs4c6QAAAs5JREFUSEut113I3nMYB/DPE7HktTTLGcqBvIUhcyBHcuJ9NlLTkiNTCFvsZAp5aTshBwo9aJLNwWZlwlYoyluK8jLL6yZjtRab0ffp+tvf3fN/7vvvua+6u+/f739dv+//un7f6+WecFCux604E4e39vv+/A1b8SA+bRtP1GIV7ut76gj6l+DtRi9gl2NDbXyHp5G3+z+S807CbWW8H8fj96zz8F1ciO0VwqkHs5TL8FqdcTceacB24VjcjwdmCdI2/xBn4yWED1Oe/YrjcCceHyPYG7gUa7GoAdtZcV1RDBoXXhh5MV7AjV1gh+IOXNAT9S88g41lNxLYPPzYE6hRj92JfcDi2b04rydgPHsOr/YB64nRqT5SGMcF9gHOxXpc1UWQOXgK5/dETRifqE9M3yuSTeKmLrAT8FNPoEb9G5xciyR0PEr5S3WaSurp8uxaLOgJmDr4PD7qsusC64kzmvpMYEfOcMTf2DMEItexEEdVsX9zOrCjsak6QNd5B/AKlnQoXI1n0X7hyenA5uLnEQKzF0dMo3dF0T2PUuQPwTEzEWQ+zhkSxlT1rwZ0rquW0mzfgBeRdnPWOAlyJdYNgH9RjflRLB0XWIiQvhVJKj2JlbVOSuQzZxxgSdyQJfJnhf+zqkBbWpPattmCLa7m2AClxH1cwOnOYeRh2IaLZgN2GuJB5I+6m6Z6pPk+Vs/S4zKL/tKeQe5qKYzAfGuwDPuq931SRpmmHq7fqZWZ3HY01M+MmDxYjodGQSmd0D5FN6FqkjtDU5gX+SF0j0fNmfGs6TtfIqHJmw6T02u0TiW5pap6curmMswdZYaZ8qgNdg1ero3Pq5ftHkDLzP5+a++eikJqZIbazJ2NfF+M/A9QE8Z8r8btQ9w5BV+XTu7njAH9gGxG7v7f0A161qwTjqU4teja1vsW+ZOQhI2EAAlZKsRbeB3vVPJ2vvM/qNC5torYboIAAAAASUVORK5CYII=" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    Записаться
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="doctors_specialists_second_item_doctor_img_info_wrapper">
+                                        <div class="doctors_specialists_img_text_wrapper">
+                                            <div class="doctors_specialists_img">
+                                                <img src="./images/vrach_siluet.png">
+                                            </div>
+                                            <div class="doctors_specialists_info_text_wrapper">
+                                                <div class="doctors_specialists_second_name_position_wrapper">
+                                                    <p class="doctors_specialists_second_name"> Иванова Алина Дмитриевна</p>
+                                                    <p class="doctors_specialists_second_position">Врач  травматолог-ортопед</p>
+                                                </div>
+                                                <div class="doctors_specialists_second_info_details_wrapper">
+                                                    <p class="doctors_specialists_second_item_info1">
+                                                        <span>Образование:</span>
+                                                        Новосибирская государственная медицинская академия, специальность лечебное дело, врач, 2000г.
+                                                    </p>
+                                                    <p class="doctors_specialists_second_item_info1 hidden_info">
+                                                        <span>Карьера:</span> <br>
+                                                        • Отделение восстановительного лечения АНО «Клиника НИИТО»,
+                                                        2011-2021г. <br>
+                                                        • Частная практика медицинский центр «Хорошие врачи», 2012-2021г.
+                                                    </p>
+                                                </div>
+                                                <a href="" class="doctors_specialists_info_link">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="31"
+                                                        viewBox="0 0 27 31">
+                                                        <g>
+                                                            <g>
+                                                                <image width="27" height="31"
+                                                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAfCAYAAAAWRbZDAAAAAXNSR0IArs4c6QAAAs5JREFUSEut113I3nMYB/DPE7HktTTLGcqBvIUhcyBHcuJ9NlLTkiNTCFvsZAp5aTshBwo9aJLNwWZlwlYoyluK8jLL6yZjtRab0ffp+tvf3fN/7vvvua+6u+/f739dv+//un7f6+WecFCux604E4e39vv+/A1b8SA+bRtP1GIV7ut76gj6l+DtRi9gl2NDbXyHp5G3+z+S807CbWW8H8fj96zz8F1ciO0VwqkHs5TL8FqdcTceacB24VjcjwdmCdI2/xBn4yWED1Oe/YrjcCceHyPYG7gUa7GoAdtZcV1RDBoXXhh5MV7AjV1gh+IOXNAT9S88g41lNxLYPPzYE6hRj92JfcDi2b04rydgPHsOr/YB64nRqT5SGMcF9gHOxXpc1UWQOXgK5/dETRifqE9M3yuSTeKmLrAT8FNPoEb9G5xciyR0PEr5S3WaSurp8uxaLOgJmDr4PD7qsusC64kzmvpMYEfOcMTf2DMEItexEEdVsX9zOrCjsak6QNd5B/AKlnQoXI1n0X7hyenA5uLnEQKzF0dMo3dF0T2PUuQPwTEzEWQ+zhkSxlT1rwZ0rquW0mzfgBeRdnPWOAlyJdYNgH9RjflRLB0XWIiQvhVJKj2JlbVOSuQzZxxgSdyQJfJnhf+zqkBbWpPattmCLa7m2AClxH1cwOnOYeRh2IaLZgN2GuJB5I+6m6Z6pPk+Vs/S4zKL/tKeQe5qKYzAfGuwDPuq931SRpmmHq7fqZWZ3HY01M+MmDxYjodGQSmd0D5FN6FqkjtDU5gX+SF0j0fNmfGs6TtfIqHJmw6T02u0TiW5pap6curmMswdZYaZ8qgNdg1ero3Pq5ftHkDLzP5+a++eikJqZIbazJ2NfF+M/A9QE8Z8r8btQ9w5BV+XTu7njAH9gGxG7v7f0A161qwTjqU4teja1vsW+ZOQhI2EAAlZKsRbeB3vVPJ2vvM/qNC5torYboIAAAAASUVORK5CYII=" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    Записаться
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   </div>
+                                </div>
+                         </div>
+                         
+                  </div>
+            </section>
+            <div class="modal_first">
+                <div class="modal_first_wrapper">
+               
+                    <div class=" modal_close">
+                        <svg height="329pt" viewBox="0 0 329.26933 329" width="329pt" xmlns="http://www.w3.org/2000/svg"><path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"/></svg>
+                    </div>
+                    <p class="modal_info">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at porta dui. Aliquam erat
+                        volutpat. Vivamus felis dui, cursus id quam a, accumsan ullamcorper nisi. Proin id nisl ipsum.
+                        In hac habitasse platea dictumst. Morbi quis eros porta tellus tincidunt fermentum non ac ipsum.
+                    </p>
+                </div>
+
+            </div>
+            <div class="modal_second">
+                <div class="modal_first_wrapper">
+                    
+                    <div class="modal_close2">
+                        <svg height="329pt" viewBox="0 0 329.26933 329" width="329pt" xmlns="http://www.w3.org/2000/svg"><path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"/></svg>
+                    </div>
+                    <p class="modal_info">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at porta dui. Aliquam erat
+                        volutpat. Vivamus felis dui, cursus id quam a, accumsan ullamcorper nisi. Proin id nisl ipsum.
+                        In hac habitasse platea dictumst. Morbi quis eros porta tellus tincidunt fermentum non ac ipsum.
+                    </p>
+                </div>
+
+            </div>
+            <div class="call_me_modal">
+
+                <form action="send.php" method="post" class="call_me_modal_wrapper">
+                    <h2 class="useful_to_learn_link popup-title">Первый шаг к жизни без боли сделан!</h2>
+                  
+                    <div class="call_me_modal_close">
+                        <svg height="329pt" viewBox="0 0 329.26933 329" width="329pt" xmlns="http://www.w3.org/2000/svg"><path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"/></svg>
+                    </div>
+                    <div class="call_me_modal_input_field_wrapper">
+                        <input type="text" class="call_me_modal_input_field" name="imya" placeholder="Ваше имя">
+                    </div>
+                    <div class="call_me_modal_input_field_wrapper second_input_field">
+                        <input type="text" name="phone" class="call_me_modal_input_field"
+                            placeholder="+7 (000) 000-00-00">
+                    </div>
+                    <button type="submit" class="call_me_modal_btn">
+                        <?xml version="1.0" encoding="UTF-8"?>
+                        <svg id="SVGDoc" width="24" height="24" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/"
+                            viewBox="0 0 24 24">
+                            <defs></defs>
+                            <desc>Generated with Avocode.</desc>
+                            <g>
+                                <g>
+                                    <title>phone</title>
+                                    <image
+                                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAq1JREFUSEuN1kmol2UUBvCfRUFEG6GFUBlUuolI0ChKGjZNQgMFkUSZNgoJ2kjTohkzKCjJLEwUalFZkIJSNBJRCxdNLiqzHAqCEBqgtHjgvJfvfvz/t++s7vc/5z3Pec95zvPeaaa22bgWV+CkXui3eA3r8eW4NNPGOI7D87ig/N/jQ+zCv4j/TJxY/ndwI77r5xsFsBAbKvDBAvp5TCFHYwkeLf9ivNSN7QPcjpXYVm3Z/z8tbO4j8Souxv14uDm6AFdjI9bgpoGJ+2FP4zZM3KQBTMeveA/n9k6dgc/x90DQzbgQM7CvAXyA+TikhthyZRaZyfs4ZyBAwkKEFDUvAMfgRzyEBzpJ1hVFX8FVuBxvDAS5C4/j+AA8gTtxGP6pBJfhdVyHl/EJTkVa+ecAkOQ9iNX5Yw8O4NjOwQAGuLWwfZ881VL1gL9Jd5Ig/XqhFqXFzMIOXIK3KiZbm40eaqtxcwOYxN3KsLtulq39DV/grKHZcU8WsAHch0d6h0/Dp5055Ka5TW4Vm4ev8PsY0LvxWAMYt1z5/YawAUfga7yL3O6aShz/2hEgz+GWAOzDX5VkVDEflbAF5A/sxaG4o36/FFsL8JdOgtxuZgCexIo6FGpNBZKqmxC2uBAkgrcAb3cOp6VrAjATO/siNQLlWdyK0C8FfYbIyJuV+MrOjizHKpzQeJ5FOr3D+3FkOa/kOEU124KLegdS/XbMaQDR9fQvvTx/ABXnVlzeif6ANxXTsrg/deV6UVX3DJYNABkVEv2JDqWVWbQJKWjB99ZjEb5H4IboTs4eXsPPHCaJ5qgn83q8WIipJruQTR5lRxWDnirnUoT/Ezbu0c9/EKHf2RUZmQhrfqjvyEfmcEp9f1wLmUWcZOMAWlDUM5uaq+eF6loGHAFMIWHMSPsPJgyUbuNbTD8AAAAASUVORK5CYII="
+                                        width="24" height="24" transform="matrix(1,0,0,1,0,0)"></image>
+                                </g>
+                            </g>
+                        </svg>
+                        Позвоните мне</button>
+                </form>
+            </div>
+            <div class="overlay"></div>
+        </main>
+        <footer class="footer">
+            <div class="footer_wrapper">
+                <div class="footer_items_wrapper">
+                    <div class="footer_logo_address_phone_info_items_wrapper">
+                        <div class="footer_logo_wrapper">
+                            <a href="">
+                                <img src="./images/footer_logo.png">
+                            </a>
+                        </div>
+                        <div class="footer_address_phone_info_items_wrapper">
+                            <div class="footer_logo_address_phone_info_item">
+                                <div class="footer_logo_address_phone_info_item_svg">
+                                    <img src="./images/clock.png">
+                                </div>
+                                <p class="footer_logo_address_phone_info_item_text">пн-пт 08.00-20.00; сб 09.00-15.00
+                                </p>
+                            </div>
+                            <div class="footer_logo_address_phone_info_item">
+                                <div class="footer_logo_address_phone_info_item_svg">
+                                    <img src="./images/information1.png">
+                                </div>
+                                <p class="footer_logo_address_phone_info_item_text">Единая справочная: +7 (383)
+                                    247-87-00</p>
+                            </div>
+                            <div class="footer_logo_address_phone_info_item">
+                                <div class="footer_logo_address_phone_info_item_svg">
+                                    <img src="./images/place2.png">
+                                </div>
+                                <p class="footer_logo_address_phone_info_item_text">город Новосибирск, ул. Щетинкина, 66
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer_social_links_info_wrapper">
+                        <div class="footer_social_links_wrapper">
+                            <a href="https://www.facebook.com/kinetiqpro-112818401004500/" class="footer_social_link">
+
+                                <img src="./images/facebook.png">
+                            </a>
+                            <a href="https://instagram.com/kinetiq.pro" class="footer_social_link">
+                                <img src="./images/instagram.png">
+                            </a>
+                            <a href="https://vk.com/kinetiqpro" class="footer_social_link">
+                                <img src="./images/vk.png">
+                            </a>
+                        </div>
+                        <div class="footer_info_wrapper">
+                            <p class="footer_info1">Политика конфиденциальности</p>
+                            <p class="footer_info">Политика противодействия коррупции и мошенничеству</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="mobile_footer_wrapper">
+
+
+                <div class="footer_social_links_wrapper">
+                    <a href="https://www.facebook.com/kinetiqpro-112818401004500/" class="footer_social_link">
+
+                        <img src="./images/facebook.png">
+                    </a>
+                    <a href="https://instagram.com/kinetiq.pro" class="footer_social_link">
+                        <img src="./images/instagram.png">
+                    </a>
+                    <a href="https://vk.com/kinetiqpro" class="footer_social_link">
+                        <img src="./images/vk.png">
+                    </a>
+                </div>
+                <p class="footer_social_links_info_mobile">г. Новосибирск, ул. Щетинкина, 66</p>
+                <p class="footer_social_links_info_mobile">Единая справочная: +7 (383) 247-87-00</p>
+                <p class="footer_social_links_info_mobile">пн-пт 08.00-20.00; сб 09.00-15.00</p>
+                <div class="footer_info_wrapper">
+                    <p class="footer_info1">Политика конфиденциальности</p>
+                    <p class="footer_info">Политика противодействия коррупции и мошенничеству</p>
+                </div>
+
+
+
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="./js/menuScroll.js"></script>
+    <script src="./js/script.js">
+    </script>
+    <script>
+     $(document).on("click", ".nested_li_title_svg_wrapper",function(){
+            $(this).parent().toggleClass("open");
+      });
+    </script>
+</body>
+
+</html>
